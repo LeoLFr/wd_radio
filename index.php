@@ -19,8 +19,8 @@ if (have_posts()) :
 
 
             <!-- Titre de la page -->
-
-            <h1><?php the_title(); ?></h1>
+            <!-- TEST TAILWIND -->
+            <h1 class="text-3xl bg-amber-700"><?php the_title(); ?></h1>
 
 
 
@@ -45,4 +45,3 @@ endif;
 
 
 get_footer();
-
