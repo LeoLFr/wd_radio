@@ -14,13 +14,12 @@ if (have_posts()) :
 
         <!-- Marge responsive -->
 
-        <div class="w-full px-5 md:px-0 md:w-4/6 mx-auto">
+        <div class="w-full px-15 md:px-0 md:w-4/6 mx-auto">
 
 
 
             <!-- Titre de la page -->
-            <!-- TEST TAILWIND -->
-            <h1 class="text-3xl bg-amber-700"><?php the_title(); ?></h1>
+            <h1><?php the_title(); ?></h1>
 
 
 
