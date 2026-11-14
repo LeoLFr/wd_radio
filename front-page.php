@@ -11,7 +11,7 @@ $images = [
     $carrousel["image_5"] ?? null,];
 ?>
 
-<section class="relative w-full h-screen overflow-hidden">
+<section class="relative w-full h-[70vh] overflow-hidden">
 
     <div class="absolute inset-0 overflow-hidden">
 
@@ -19,7 +19,7 @@ $images = [
             <?php if ($image): ?>
 
                 <div class="slide-JS absolute inset-0">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="w-full h-full object-cover">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="w-full h-[70vh] object-cover">
                 </div>
 
             <?php endif; ?>
@@ -27,13 +27,17 @@ $images = [
 
     </div>
 
-    <div class="absolute inset-0 bg-black/20 z-10 overflow-hidden"></div>
+    <div class="absolute inset-0 bg-black/30 z-10 overflow-hidden"></div>
 
-    <div class="relative z-20 h-full flex flex-col">
+    <div class="relative z-20 h-[70vh] flex flex-col container mt-[10vh] mix-blend-difference">
 
-        <h1 class="text-white">
-            <?php bloginfo('name'); ?>
-        </h1>
+        <div class="text-9xl text-white  flex flex-col uppercase">
+            <h1 class="">Radio Communautaire</h1>
+            <div class="flex flex-col justify-end items-end">
+                <h1 class="">de la Matanie</h1>
+            </div>
+        </div>
+
 
     </div>
 

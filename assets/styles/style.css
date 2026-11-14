@@ -8,3 +8,11 @@ Version: 1.0
 @import "tailwindcss";
 
 @source "../../**/*.{php,js}";
+
+@layer utilities {
+
+.container {
+    @apply max-w-[100em] w-full mx-auto lg:px-[6vw] px-[3vw] min-w-full;
+}
+
+}
