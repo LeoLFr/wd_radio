@@ -12,6 +12,4 @@
 
 <body>
 
-</body>
-
-</html>
+<main class="min-h-screen"

@@ -1,8 +1,31 @@
 <?php
+
 function radio_enqueue_scripts_styles()
 {
     wp_enqueue_style("main", get_stylesheet_uri());
+
+    $gsap_version = "3.13.0";
+    $gsap_cdn = "https://cdn.jsdelivr.net/npm/gsap@" . $gsap_version . "/dist/";
+
+    // GSAP
+    wp_enqueue_script("gsap", $gsap_cdn . "gsap.min.js", [], null, true);
+
+    // ScrollTrigger
+    wp_enqueue_script("gsap-scrolltrigger", $gsap_cdn . "ScrollTrigger.min.js", ["gsap"], null, true);
+
+    // SplitText
+    wp_enqueue_script("gsap-splittext", $gsap_cdn . "SplitText.min.js", ["gsap"], null, true);
+
+    // Lien script slider du hero
+    wp_enqueue_script(
+        "slider",
+        get_template_directory_uri() . "/assets/scripts/slider.js",
+        ["gsap", "gsap-scrolltrigger", "gsap-splittext"],
+        filemtime(get_template_directory() . "/assets/scripts/slider.js"),
+        true
+    );
 }
+
 add_action("wp_enqueue_scripts", "radio_enqueue_scripts_styles");
 
 function radio_setup_theme()
