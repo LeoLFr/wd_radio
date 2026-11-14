@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const DUREE_AFFICHAGE = 4;   
-    const DUREE_TRANSITION = 1.2; 
+    const DUREE_TRANSITION = 1.5; 
 
     const slides = gsap.utils.toArray(".slide-JS");
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to(actuel, {
             xPercent: -100,
             duration: DUREE_TRANSITION,
-            ease: "power2.inOut",
+            ease: "power3.inOut",
         });
 
         gsap.fromTo(
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 xPercent: 0,
                 duration: DUREE_TRANSITION,
-                ease: "power2.inOut",
+                ease: "power3.inOut",
 
                 onComplete: () => {
                     gsap.delayedCall(DUREE_AFFICHAGE, allerAuSuivant);

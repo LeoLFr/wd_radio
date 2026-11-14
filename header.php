@@ -8,8 +8,8 @@
     <?php wp_head(); ?>
 </head>
 
-<header class="w-full">
-    <div class="fixed z-99 bg-amber-50 py-3 flex flex-col justify-end items-end">
+<header class="fixed z-99 flex flex-col justify-end items-end h-screen w-full bg-amber-50 nav-menu-JS hidden">
+    <div class="text-white">
 
         <?php wp_nav_menu([
 
@@ -18,7 +18,7 @@
             'container' => 'nav',
             'container_class' => ' flex justify-center md:justify-end main-nav',
 
-        ])?>
+        ])?>                                                                                                                                                                                                                                                                                                                                        
 
     </div>
 </header>
