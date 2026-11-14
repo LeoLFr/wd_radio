@@ -6,3 +6,5 @@ Version: 1.0
 
 
 @import "tailwindcss";
+
+@source "../../**/*.{php,js}";

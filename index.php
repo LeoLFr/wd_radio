@@ -14,14 +14,14 @@ if (have_posts()) :
 
         <!-- Marge responsive -->
 
-        <div class="w-full px-15 md:px-0 md:w-4/6 mx-auto">
+        <div class="w-full px-15 md:px-0 md:w-4/6 mx-auto bg-amber-500">
 
 
 
             <!-- Titre de la page -->
             <h1><?php the_title(); ?></h1>
 
-
+ 
 
             <!-- Contenu de la page -->
 
