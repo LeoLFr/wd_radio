@@ -41,7 +41,7 @@ $images = [
             </div>
         </div>
 
-        <p class="w-1/3 mr-120 ">
+        <p class="w-1/3 mr-120 text-white">
             <?php bloginfo('description'); ?>
         </p>
 
