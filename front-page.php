@@ -31,7 +31,9 @@ $images = [
     <div class="absolute inset-0 bg-black/30 z-10 overflow-hidden"></div>
 
     <div class="relative z-20 h-[70vh] flex flex-col container mt-[10vh] mix-blend-difference">
-        <div class="text-6xl text-white">allo</div>
+
+        <p class="text-white text-xl"><?php bloginfo('description'); ?></p>
+
         <div class="text-9xl text-white  flex flex-col uppercase">
             <h1 class="">Radio Communautaire</h1>
             <div class="flex flex-col justify-end items-end">
