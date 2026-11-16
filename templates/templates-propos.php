@@ -12,17 +12,17 @@ get_header();
 
 <?php
 $notremission = get_field("notre-mission");
-$title = get_field("title-mission");
-$description = get_sub_field("description-mission");
+$title_mission = get_field("title-mission");
+$description_mission = get_sub_field("description-mission");
 
-$image_1 = get_field("image-mission-1");
-$image_2 = get_field("image-mission-2");
+$image_mission_1 = get_field("image-mission-1");
+$image_mission_2 = get_field("image-mission-2");
 
 ?>
 
 <!-- Ma section avec son container responsive -->
 
-<section class="w-full px-5 md:px-0 md:w-4/6 mx-auto min-h-[65vh]">
+<section class="container">
 
     <!-- Titre de la page -->
 
@@ -30,11 +30,16 @@ $image_2 = get_field("image-mission-2");
 
     <!-- Contenu de la page -->
 
-    <div class="border-amber-600 border-2 p-5 rounded-xl word-break break-word">
-    <h3><?php echo $title; ?></h3>
-    <p><?php echo $description; ?></p>
-    <img src="<?php echo $image_1; ?>" alt=""/>
-    <img src="<?php echo $image_2; ?>" alt=""/>
+    <div class="">
+
+        <h3><?php echo $title_mission; ?></h3>
+        <p><?php echo $description_mission; ?></p>
+
+        <div>
+            <img src="<?php echo $image_mission_1; ?>" alt=""/>
+            <img src="<?php echo $image_mission_2; ?>" alt=""/>
+        </div>
+
     </div>
 
 </section>
