@@ -14,7 +14,7 @@ if (have_posts()) :
 
         <!-- Marge responsive -->
 
-        <div class="w-full px-15 md:px-0 md:w-4/6 mx-auto bg-amber-500">
+        <div class="">
 
 
 
