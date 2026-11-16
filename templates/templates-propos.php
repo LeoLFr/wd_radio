@@ -1,43 +1,46 @@
 <?php
 
 /*
-
 Template Name: À propos
-
-
 */
 
 get_header();
-?>
 
-<?php
 $notremission = get_field("notre-mission");
-$title_mission = get_field("title-mission");
-$description_mission = get_sub_field("description-mission");
 
-$image_mission_1 = get_field("image-mission-1");
-$image_mission_2 = get_field("image-mission-2");
+$title_mission = $notremission["title-mission"] ?? "";
+
+$image_mission_1 = $notremission["image-mission-1"] ?? "";
+$image_mission_2 = $notremission["image-mission-2"] ?? "";
 
 ?>
-
-<!-- Ma section avec son container responsive -->
 
 <section class="container">
 
-    <!-- Titre de la page -->
-
     <h2 class="mb-2 font-bold text-xl mt-10"><?php the_title(); ?></h2>
 
-    <!-- Contenu de la page -->
+    <div>
 
-    <div class="">
+        <h3><?php echo esc_html($title_mission); ?></h3>
 
-        <h3><?php echo $title_mission; ?></h3>
-        <p><?php echo $description_mission; ?></p>
+        <?php if (!empty($notremission["description-mission"])) : ?>
+
+            <?php foreach ($notremission["description-mission"] as $description_mission) : ?>
+
+                <p><?php echo esc_html($description_mission["description-mission"]); ?></p>
+
+            <?php endforeach; ?>
+
+        <?php endif; ?>
 
         <div>
-            <img src="<?php echo $image_mission_1; ?>" alt=""/>
-            <img src="<?php echo $image_mission_2; ?>" alt=""/>
+            <?php if (!empty($image_mission_1)) : ?>
+                <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="">
+            <?php endif; ?>
+
+            <?php if (!empty($image_mission_2)) : ?>
+                <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="">
+            <?php endif; ?>
         </div>
 
     </div>
