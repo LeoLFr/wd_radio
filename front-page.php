@@ -8,7 +8,8 @@ $images = [
     $carrousel["image_2"] ?? null,
     $carrousel["image_3"] ?? null,
     $carrousel["image_4"] ?? null,
-    $carrousel["image_5"] ?? null,];
+    $carrousel["image_5"] ?? null,
+];
 ?>
 
 <section class="relative w-full h-[70vh] overflow-hidden">
@@ -30,13 +31,14 @@ $images = [
     <div class="absolute inset-0 bg-black/30 z-10 overflow-hidden"></div>
 
     <div class="relative z-20 h-[70vh] flex flex-col container mt-[10vh] mix-blend-difference">
-
+        <div class="text-6xl text-white">allo</div>
         <div class="text-9xl text-white  flex flex-col uppercase">
             <h1 class="">Radio Communautaire</h1>
             <div class="flex flex-col justify-end items-end">
                 <h1 class="">de la Matanie</h1>
             </div>
         </div>
+
 
 
     </div>
