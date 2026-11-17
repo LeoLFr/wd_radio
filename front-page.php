@@ -32,7 +32,7 @@ $images = [
 
     <div class="relative z-20 h-[70vh] flex flex-col container mt-[10vh] mix-blend-difference">
 
-        <p class="text-white text-xl"><?php bloginfo('description'); ?></p>
+
 
         <div class="text-9xl text-white  flex flex-col uppercase">
             <h1 class="">Radio Communautaire</h1>
@@ -41,6 +41,9 @@ $images = [
             </div>
         </div>
 
+        <p class="w-1/3 mr-120 text-white">
+            <?php bloginfo('description'); ?>
+        </p>
 
 
     </div>
