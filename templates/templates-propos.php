@@ -15,11 +15,11 @@ $image_mission_2 = $notremission["image-mission-2"] ?? "";
 
 ?>
 
-<section class="container">
+<!-- Section : Notre mission -->
 
     <h2 class="mb-2 font-bold text-xl mt-10"><?php the_title(); ?></h2>
 
-    <div>
+    <div class="flex flex-col gap-4 cols-2">
 
         <h3><?php echo esc_html($title_mission); ?></h3>
 
@@ -33,13 +33,13 @@ $image_mission_2 = $notremission["image-mission-2"] ?? "";
 
         <?php endif; ?>
 
-        <div>
+        <div class="flex flex-col md:flex-row gap-4 mt-4">
             <?php if (!empty($image_mission_1)) : ?>
-                <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="">
+                <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="" class="w-120 h-120 rounded-sm">
             <?php endif; ?>
 
             <?php if (!empty($image_mission_2)) : ?>
-                <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="">
+                <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="" class="w-120 h-120 rounded-sm">
             <?php endif; ?>
         </div>
 
