@@ -200,6 +200,18 @@
   .top-0 {
     top: 0px;
   }
+  .top-2 {
+    top: calc(var(--spacing) * 2);
+  }
+  .top-3 {
+    top: calc(var(--spacing) * 3);
+  }
+  .top-4 {
+    top: calc(var(--spacing) * 4);
+  }
+  .right-0 {
+    right: 0px;
+  }
   .right-25 {
     right: calc(var(--spacing) * 25);
   }
@@ -211,6 +223,12 @@
   }
   .z-99 {
     z-index: 99;
+  }
+  .col-start-3 {
+    grid-column-start: 3;
+  }
+  .col-start-4 {
+    grid-column-start: 4;
   }
   .container {
     width: 100%;
@@ -260,6 +278,9 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
   }
@@ -286,6 +307,9 @@
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
+  }
+  .h-17 {
+    height: calc(var(--spacing) * 17);
   }
   .h-800 {
     height: calc(var(--spacing) * 800);
@@ -320,6 +344,9 @@
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
+  .w-17 {
+    width: calc(var(--spacing) * 17);
+  }
   .w-70 {
     width: calc(var(--spacing) * 70);
   }
@@ -352,6 +379,9 @@
   }
   .resize {
     resize: both;
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -452,6 +482,10 @@
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
+  .text-9xl {
+    font-size: var(--text-9xl);
+    line-height: var(--tw-leading, var(--text-9xl--line-height));
+  }
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
@@ -463,6 +497,9 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-white {
     color: var(--color-white);
@@ -537,28 +574,17 @@
     .lg\:col-start-4 {
       grid-column-start: 4;
     }
-    .lg\:h-\[70vh\] {
-      height: 70vh;
-    }
     .lg\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   @media (width >= 80rem) {
-    .xl\:h-\[70vh\] {
-      height: 70vh;
-    }
     .xl\:h-\[80vh\] {
       height: 80vh;
     }
     .xl\:text-9xl {
       font-size: var(--text-9xl);
       line-height: var(--tw-leading, var(--text-9xl--line-height));
-    }
-  }
-  @media (width >= 96rem) {
-    .\32 xl\:h-\[70vh\] {
-      height: 70vh;
     }
   }
 }

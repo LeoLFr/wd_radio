@@ -13,7 +13,9 @@
     <div class="flex justify-between py-3 container z-99">
 
         <div class="flex items-center">
-            <div class="">Logo</div>
+            <div class="h-12 w-17 object-cover flex items-center bg-white rounded-lg px-1 py-3">
+                <?php if (has_custom_logo()) { the_custom_logo(); }?>
+            </div>
         </div>
 
         <div class="flex gap-5">
@@ -39,16 +41,21 @@
         
     </div>
 
-    <div class="menu-overlay invisible fixed inset-0  bg-purple text-white pt-32">
+    <div class="menu-overlay invisible fixed inset-0  bg-purple text-white">
         <div class="container">
 
-        <div class="absolute top-0 right-25 py-3">
-            <div class="bg-black rounded-lg h-12 w-12 flex flex-col items-center justify-center gap-1.25 cursor-pointer menu-close-JS">
-                <span class="h-0.5 w-6 bg-white translate-y-[3.5px] rotate-45 scale-x-75"></span>
-                <span class="h-0.5 w-6 bg-white translate-y-[-3.5px] -rotate-45 scale-x-75"></span>
+        <div class="relative top-3">
+            <div class="bg-white px-1 py-3 flex rounded-lg h-12 items-center gap-5 cursor-pointer menu-close-JS absolute top-0 right-0">
+                <div class="ml-3 font-semibold text-black">Fermer</div>
+                <div class="bg-black rounded-lg h-10 w-10 flex flex-col items-center justify-center gap-1.25 cursor-pointer">
+                    <span class="h-0.5 w-6 bg-white translate-y-[3.5px] rotate-45 scale-x-75"></span>
+                    <span class="h-0.5 w-6 bg-white translate-y-[-3.5px] -rotate-45 scale-x-75"></span>
+                </div>
             </div>
         </div>
 
+
+        <div class="pt-32">
             <?php wp_nav_menu([
 
                 'menu' => '',
@@ -57,6 +64,10 @@
                 'container_class' => '',
 
             ])?>                                                                                                                                                                                                                                                                                                                                        
+
+        </div>
+
+
 
         </div>
     </div>

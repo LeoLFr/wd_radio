@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: 0.7,
             ease: "power3.out",
             stagger: 0.08,
-            delay: 0.85,
+            delay: 0.95,
             overwrite: true,
         });
 
