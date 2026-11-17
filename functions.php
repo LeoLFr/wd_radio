@@ -2,7 +2,12 @@
 
 function radio_enqueue_scripts_styles()
 {
-    wp_enqueue_style("main", get_stylesheet_uri());
+    wp_enqueue_style(
+        "main",
+        get_stylesheet_uri(),
+        [],
+        filemtime(get_stylesheet_directory() . "/style.css")
+    );
 
     $gsap_version = "3.13.0";
     $gsap_cdn = "https://cdn.jsdelivr.net/npm/gsap@" . $gsap_version . "/dist/";
@@ -16,12 +21,22 @@ function radio_enqueue_scripts_styles()
     // SplitText
     wp_enqueue_script("gsap-splittext", $gsap_cdn . "SplitText.min.js", ["gsap"], null, true);
 
-    // Lien script slider du hero
+    // Custom Ease
+    wp_enqueue_script("gsap-customease", $gsap_cdn . "CustomEase.min.js", ["gsap"], null, true);
+
     wp_enqueue_script(
         "slider",
         get_template_directory_uri() . "/assets/scripts/slider.js",
         ["gsap", "gsap-scrolltrigger", "gsap-splittext"],
         filemtime(get_template_directory() . "/assets/scripts/slider.js"),
+        true
+    );
+
+    wp_enqueue_script(
+        "menu",
+        get_template_directory_uri() . "/assets/scripts/menu.js",
+        ["gsap", "gsap-splittext", "gsap-customease"],
+        filemtime(get_template_directory() . "/assets/scripts/menu.js"),
         true
     );
 }
@@ -33,7 +48,7 @@ function radio_setup_theme()
     add_theme_support("title-tag");
     add_theme_support("post-thumbnails");
 
-    //Ajout d'un custom header
+    // Ajout d'un custom header
     add_theme_support("custom-header", [
         'width' => 1920,
         'height' => 1080,
@@ -41,7 +56,7 @@ function radio_setup_theme()
         'flex-height' => true
     ]);
 
-    //Ajout d'un custom logo
+    // Ajout d'un custom logo
     add_theme_support("custom-logo", [
         'width' => 532,
         'height' => 532,
@@ -57,7 +72,6 @@ function radio_setup_theme()
         "meta"
     ]);
 
-    //Enregistrer un Menu
-    register_nav_menu("main-menu", _("Menu principal"));
+    register_nav_menu("main-menu", __("Menu principal"));
 }
 add_action("after_setup_theme", "radio_setup_theme");
