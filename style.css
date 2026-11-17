@@ -458,6 +458,22 @@
     border-style: var(--tw-border-style);
     border-width: 4px;
   }
+  .border-r-9 {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 9px;
+  }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
+  .border-b-9 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 9px;
+  }
+  .border-l-9 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 9px;
+  }
   .bg-black {
     background-color: var(--color-black);
   }
