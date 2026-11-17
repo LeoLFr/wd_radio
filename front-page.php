@@ -41,10 +41,17 @@ $images = [
             </div>
         </div>
 
-        <p class="w-1/3 mr-120 text-white">
-            <?php bloginfo('description'); ?>
-        </p>
-
+        <div class="grid grid-cols-4 gap-2">
+            <p class="col-start-3 text-white mt-20">
+                <?php bloginfo('description'); ?>
+            </p>
+        </div>
+        <div class="grid grid-cols-4 gap-2">
+            <p class="col-start-4 text-white mt-5">
+                L'initiative est portée par une équipe engagée et expérimentée, soutenue par l'implication de
+                ses membres.
+            </p>
+        </div>
 
     </div>
 
