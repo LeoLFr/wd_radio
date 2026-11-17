@@ -22,7 +22,7 @@ Version: 1.0
     --color-purple-dark: var(--PurpleDark);
     --color-purple: var(--Purple);
     --color-orange-flash: var(--OrangeFlash);
-    --color-orange: var(--Orange);
+    --color-orange-light: var(--OrangeLight);
     --color-beige: var(--Beige);
 }
 

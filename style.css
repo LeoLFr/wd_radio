@@ -8,9 +8,6 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-green-50: oklch(98.2% 0.018 155.826);
-    --color-green-200: oklch(92.5% 0.084 155.995);
-    --color-green-600: oklch(62.7% 0.194 149.214);
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-black: #000;
     --color-white: #fff;
@@ -278,12 +275,6 @@
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
   }
-  .ml-5 {
-    margin-left: calc(var(--spacing) * 5);
-  }
-  .ml-52 {
-    margin-left: calc(var(--spacing) * 52);
-  }
   .ml-auto {
     margin-left: auto;
   }
@@ -455,6 +446,9 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
+  .rounded-tl-none {
+    border-top-left-radius: 0;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -463,12 +457,9 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-5 {
+  .border-4 {
     border-style: var(--tw-border-style);
-    border-width: 5px;
-  }
-  .border-l-dark {
-    border-left-color: var(--Dark);
+    border-width: 4px;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -482,11 +473,11 @@
   .bg-blue-400 {
     background-color: var(--color-blue-400);
   }
-  .bg-green-600 {
-    background-color: var(--color-green-600);
-  }
   .bg-orange-flash {
     background-color: var(--OrangeFlash);
+  }
+  .bg-orange-light {
+    background-color: var(--OrangeLight);
   }
   .bg-purple {
     background-color: var(--Purple);
@@ -497,29 +488,14 @@
   .object-cover {
     object-fit: cover;
   }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
-  }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
-  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
-  }
-  .p-10 {
-    padding: calc(var(--spacing) * 10);
-  }
-  .p-20 {
-    padding: calc(var(--spacing) * 20);
   }
   .p-60 {
     padding: calc(var(--spacing) * 60);
   }
   .px-1 {
     padding-inline: var(--spacing);
-  }
-  .px-5 {
-    padding-inline: calc(var(--spacing) * 5);
   }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
