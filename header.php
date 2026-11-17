@@ -42,6 +42,13 @@
     <div class="menu-overlay invisible fixed inset-0  bg-green-300 text-white pt-32">
         <div class="container">
 
+        <div class="absolute top-0 right-25 py-3">
+            <div class="bg-black rounded-lg h-12 w-12 flex flex-col items-center justify-center gap-1.25 cursor-pointer menu-close-JS">
+                <span class="h-0.5 w-6 bg-white translate-y-[3.5px] rotate-45 scale-x-75"></span>
+                <span class="h-0.5 w-6 bg-white translate-y-[-3.5px] -rotate-45 scale-x-75"></span>
+            </div>
+        </div>
+
             <?php wp_nav_menu([
 
                 'menu' => '',
