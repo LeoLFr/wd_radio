@@ -35,11 +35,11 @@ $image_mission_2 = $notremission["image-mission-2"] ?? "";
 
         <div class="flex flex-col md:flex-row gap-4 mt-4">
             <?php if (!empty($image_mission_1)) : ?>
-                <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="" class="w-120 h-120 rounded-sm">
+                <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="" class="w-120 h-120 rounded-sm object-cover">
             <?php endif; ?>
 
             <?php if (!empty($image_mission_2)) : ?>
-                <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="" class="w-120 h-120 rounded-sm">
+                <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="" class="w-120 h-120 rounded-sm object-cover">
             <?php endif; ?>
         </div>
 
