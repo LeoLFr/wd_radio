@@ -10,11 +10,12 @@ $images = [
     $carrousel["image_4"] ?? null,
     $carrousel["image_5"] ?? null,
 ];
+
 ?>
 
 <section class="relative w-full h-[70vh] overflow-hidden">
 
-    <div class="absolute inset-0 overflow-hidden h-800">
+    <div class="absolute inset-0 overflow-hidden h-800 brightness-70">
 
         <?php foreach ($images as $image): ?>
             <?php if ($image): ?>
@@ -28,7 +29,7 @@ $images = [
 
     </div>
 
-    <div class="absolute inset-0 bg-black/30 z-10 overflow-hidden"></div>
+
 
     <div class="relative z-20 h-[70vh] flex flex-col container mt-[10vh] mix-blend-difference">
 
@@ -55,6 +56,20 @@ $images = [
 
     </div>
 
+</section>
+
+<?php
+$nosfrequences = get_field("nos-frequences");
+
+$title_frequences = $nosfrequences["title-frequences"] ?? "";
+$num_frequences = $nosfrequences["num-frequences"] ?? "";
+?>
+
+<section class="bg-(--color-purple) text-white">
+    <div class="p-20">
+        <h3 class="text-3xl font-bold"><?php echo esc_html($title_frequences); ?></h3>
+        <p><?php echo esc_html($num_frequences); ?></p>
+    </div>
 </section>
 
 <?php get_footer(); ?>
