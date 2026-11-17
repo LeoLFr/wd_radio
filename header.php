@@ -39,7 +39,7 @@
         
     </div>
 
-    <div class="menu-overlay invisible fixed inset-0  bg-green-300 text-white pt-32">
+    <div class="menu-overlay invisible fixed inset-0  bg-purple text-white pt-32">
         <div class="container">
 
         <div class="absolute top-0 right-25 py-3">
