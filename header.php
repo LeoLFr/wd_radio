@@ -13,7 +13,7 @@
     <div class="flex justify-between py-3 container z-99">
 
         <div class="flex items-center">
-            <div class="h-12 w-17 object-cover flex items-center bg-white rounded-lg px-1 py-3">
+            <div class="h-12 w-17 object-cover flex items-center bg-white rounded-lg px-1 py-3 cursor-pointer">
                 <?php if (has_custom_logo()) { the_custom_logo(); }?>
             </div>
         </div>
@@ -21,11 +21,8 @@
         <div class="flex gap-5">
 
             <!-- Barre de recherche en placeholder a date -->
-            <div class="bg-white py-3 px-1 flex rounded-lg items-center w-70 h-12">
-                <div class="flex gap-0.5 bg-black rounded-md h-10 w-10 items-center justify-center">
-                    
-                </div>
-                <div class="opacity-50 ml-3">Faire une recherche</div>
+            <div class="">
+                <?php echo get_search_form(); ?>
             </div>
 
             <!-- Menu burger -->
