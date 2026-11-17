@@ -8,19 +8,54 @@
     <?php wp_head(); ?>
 </head>
 
-<header class="fixed z-99 bg-red-500">
-    <div class="text-white">
+<header class="fixed z-99 top-0 w-full">
 
-        <?php wp_nav_menu([
+    <div class="flex justify-between py-3 container z-99">
 
-            'menu' => '',
-            'menu_class' => '',
-            'container' => '',
-            'container_class' => '',
+        <div class="flex items-center">
+            <div class="">Logo</div>
+        </div>
 
-        ])?>                                                                                                                                                                                                                                                                                                                                        
+        <div class="flex gap-5">
+
+            <!-- Barre de recherche en placeholder a date -->
+            <div class="bg-white py-3 px-1 flex rounded-lg items-center w-70 h-12">
+                <div class="flex gap-0.5 bg-black rounded-md h-10 w-10 items-center justify-center">
+                    
+                </div>
+                <div class="opacity-50 ml-3">Faire une recherche</div>
+            </div>
+
+            <!-- Menu burger -->
+            <div class="bg-white px-1 py-3 flex rounded-lg h-12 items-center gap-5 cursor-pointer menu-JS">
+                <div class="ml-3 font-semibold">Menu</div>
+                <div class="flex gap-0.5 bg-black rounded-md h-10 w-10 items-center justify-center">
+                    <span class="bg-white h-4 w-0.5"></span>
+                    <span class="bg-white h-5 w-0.5"></span>
+                    <span class="bg-white h-2 w-0.5"></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="menu-overlay invisible fixed inset-0  bg-green-300 text-white pt-32">
+        <div class="container">
+
+            <?php wp_nav_menu([
+
+                'menu' => '',
+                'menu_class' => 'flex flex-col gap-4 text-2xl uppercase',
+                'container' => 'false',
+                'container_class' => '',
+
+            ])?>                                                                                                                                                                                                                                                                                                                                        
+
+        </div>
+    </div>
 
     </div>
+
 </header>
 
 <body>
