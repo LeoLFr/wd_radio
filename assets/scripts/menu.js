@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         gsap.to(menu, {
             xPercent: 100,
-            duration: 0.6,
+            duration: 1,
             ease: "menuEase",
             overwrite: true,
             onComplete: () => {
