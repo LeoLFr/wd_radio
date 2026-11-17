@@ -20,7 +20,7 @@ $images = [
             <?php if ($image): ?>
 
                 <div class="slide-JS absolute inset-0">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="w-full h-[70vh] object-cover">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="w-full h-[90vh] xl:h-[80vh] object-cover">
                 </div>
 
             <?php endif; ?>
@@ -41,7 +41,7 @@ $images = [
             </div>
         </div>
 
-        <div class="mt-30 sm:mt-20 md:mt-0 md:grid md:grid-cols-2 w-2/3 md:w-full lg:grid-cols-4 gap-2">
+        <div class="mt-50 sm:mt-20 md:mt-0 md:grid md:grid-cols-2 w-2/3 md:w-full lg:grid-cols-4 gap-2">
             <p class="md:col-start-1 lg:col-start-3 text-white mt-20">
                 <?php bloginfo('description'); ?>
             </p>

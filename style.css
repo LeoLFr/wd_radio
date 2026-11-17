@@ -242,6 +242,9 @@
   .mt-30 {
     margin-top: calc(var(--spacing) * 30);
   }
+  .mt-50 {
+    margin-top: calc(var(--spacing) * 50);
+  }
   .mt-\[10vh\] {
     margin-top: 10vh;
   }
@@ -259,6 +262,12 @@
   }
   .hidden {
     display: none;
+  }
+  .table {
+    display: table;
+  }
+  .h-0 {
+    height: 0px;
   }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
@@ -284,11 +293,20 @@
   .h-\[70vh\] {
     height: 70vh;
   }
+  .h-\[90vh\] {
+    height: 90vh;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-0 {
+    width: 0px;
+  }
   .w-0\.5 {
     width: calc(var(--spacing) * 0.5);
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
   }
   .w-2\/3 {
     width: calc(2 / 3 * 100%);
@@ -307,6 +325,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .translate-y-\[-3\.5px\] {
     --tw-translate-y: -3.5px;
@@ -329,6 +350,9 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .resize {
+    resize: both;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -347,8 +371,14 @@
   .justify-end {
     justify-content: flex-end;
   }
+  .gap-0 {
+    gap: 0px;
+  }
   .gap-0\.5 {
     gap: calc(var(--spacing) * 0.5);
+  }
+  .gap-1 {
+    gap: var(--spacing);
   }
   .gap-1\.25 {
     gap: calc(var(--spacing) * 1.25);
@@ -370,6 +400,10 @@
   }
   .rounded-md {
     border-radius: var(--radius-md);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -436,11 +470,33 @@
   .uppercase {
     text-transform: uppercase;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .opacity-50 {
     opacity: 50%;
   }
+  .mix-blend-color-dodge {
+    mix-blend-mode: color-dodge;
+  }
   .mix-blend-difference {
     mix-blend-mode: difference;
+  }
+  .mix-blend-hard-light {
+    mix-blend-mode: hard-light;
+  }
+  .mix-blend-lighten {
+    mix-blend-mode: lighten;
+  }
+  .mix-blend-plus-darker {
+    mix-blend-mode: plus-darker;
+  }
+  .mix-blend-soft-light {
+    mix-blend-mode: soft-light;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   @media (width >= 40rem) {
     .sm\:mt-20 {
@@ -481,14 +537,28 @@
     .lg\:col-start-4 {
       grid-column-start: 4;
     }
+    .lg\:h-\[70vh\] {
+      height: 70vh;
+    }
     .lg\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   @media (width >= 80rem) {
+    .xl\:h-\[70vh\] {
+      height: 70vh;
+    }
+    .xl\:h-\[80vh\] {
+      height: 80vh;
+    }
     .xl\:text-9xl {
       font-size: var(--text-9xl);
       line-height: var(--tw-leading, var(--text-9xl--line-height));
+    }
+  }
+  @media (width >= 96rem) {
+    .\32 xl\:h-\[70vh\] {
+      height: 70vh;
     }
   }
 }
@@ -548,9 +618,19 @@ html {
   inherits: false;
   initial-value: 1;
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: block))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
@@ -561,7 +641,9 @@ html {
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
+      --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
     }
   }
 }
