@@ -68,7 +68,7 @@ $num_frequences = $nosfrequences["num-frequences"] ?? "";
 <section class="bg-(--color-purple) text-white">
     <div class="p-20">
         <h3 class="text-3xl font-bold"><?php echo esc_html($title_frequences); ?></h3>
-        <p><?php echo esc_html($num_frequences); ?></p>
+        <p class="text-center text-6xl font-bold m-50"><?php echo esc_html($num_frequences); ?></p>
     </div>
 </section>
 
