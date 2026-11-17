@@ -13,7 +13,7 @@
     <div class="flex justify-between py-3 container z-99">
 
         <div class="flex items-center">
-            <div class="h-12 w-17 object-cover flex items-center bg-white rounded-lg px-1 py-3 cursor-pointer">
+            <div class="h-12 w-19 object-cover flex items-center bg-white rounded-lg px-1 py-3 cursor-pointer">
                 <?php if (has_custom_logo()) { the_custom_logo(); }?>
             </div>
         </div>
