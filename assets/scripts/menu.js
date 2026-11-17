@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     CustomEase.create("menuEase", "0.8, 0, 0.1, 1");
 
     const bouton = document.querySelector(".menu-JS");
+    const boutonFermer = document.querySelector(".menu-close-JS");
     const label = document.querySelector(".menu-label");
     const menu = document.querySelector(".menu-overlay");
     const liens = menu.querySelectorAll("a");
@@ -17,10 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     gsap.set(menu, { xPercent: 100, visibility: "visible" });
-
     gsap.set(split.lines, { yPercent: 100 });
 
     function ouvrirMenu() {
+
         document.body.style.overflow = "hidden";
 
         gsap.to(menu, {
@@ -40,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         changerLabel("Fermer");
+
+        estOuvert = true;
     }
 
     function fermerMenu() {
@@ -59,9 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         changerLabel("Menu");
+
+        estOuvert = false;
     }
 
     function changerLabel(nouveauTexte) {
+
         gsap.killTweensOf(label);
 
         gsap.to(label, {
@@ -71,22 +77,35 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "power2.in",
             onComplete: () => {
                 label.textContent = nouveauTexte;
+
                 gsap.fromTo(
                     label,
                     { yPercent: 100, opacity: 0 },
-                    { yPercent: 0, opacity: 1, duration: 0.25, ease: "power2.out" }
+                    {
+                        yPercent: 0,
+                        opacity: 1,
+                        duration: 0.25,
+                        ease: "power2.out"
+                    }
                 );
             },
         });
     }
 
     bouton.addEventListener("click", () => {
+        estOuvert ? fermerMenu() : ouvrirMenu();
+    });
+
+    boutonFermer.addEventListener("click", () => {
         if (estOuvert) {
             fermerMenu();
-        } else {
-            ouvrirMenu();
         }
-        estOuvert = !estOuvert;
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && estOuvert) {
+            fermerMenu();
+        }
     });
 
 });

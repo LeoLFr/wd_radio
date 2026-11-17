@@ -4,10 +4,27 @@ Author: Brutal
 Version: 1.0
 */
 
-
 @import "tailwindcss";
 
 @source "../../**/*.{php,js}";
+
+:root {
+    --Dark: #0F0E0F;
+    --PurpleDark: #540D6E;
+    --Purple: #693D9E;
+    --OrangeFlash: #FF8600;
+    --OrangeLight: #FDBE00;
+    --Beige: #FFFBEF;
+}
+
+@theme inline {
+    --color-dark: var(--Dark);
+    --color-purple-dark: var(--PurpleDark);
+    --color-purple: var(--Purple);
+    --color-orange-flash: var(--OrangeFlash);
+    --color-orange: var(--Orange);
+    --color-beige: var(--Beige);
+}
 
 @layer utilities {
 
@@ -15,4 +32,12 @@ Version: 1.0
     @apply max-w-[100em] w-full mx-auto lg:px-[6vw] px-[3vw] min-w-full;
 }
 
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
 }
