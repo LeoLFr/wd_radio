@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const boutonFermer = document.querySelector(".menu-close-JS");
     const label = document.querySelector(".menu-label");
     const menu = document.querySelector(".menu-overlay");
+    const icone1 = document.querySelector(".menu-icone-1-JS");
+    const icone2 = document.querySelector(".menu-icone-2-JS");
+    const icone3 = document.querySelector(".menu-icone-3-JS");
     const liens = menu.querySelectorAll("a");
 
     let estOuvert = false;
@@ -19,6 +22,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.set(menu, { xPercent: 100, visibility: "visible" });
     gsap.set(split.lines, { yPercent: 100 });
+
+    gsap.to(".menu-icone-1-JS", {
+        height: 18,      
+        duration: 0.6,    
+        repeat: -1,  
+        delay: 0.25,      
+        yoyo: true,       
+        ease: ""
+    });
+    
+    gsap.to(".menu-icone-2-JS", {
+        height: 25,      
+        duration: 0.6,    
+        repeat: -1,        
+        yoyo: true,       
+        ease: ""
+    });
+
+    gsap.to(".menu-icone-3-JS", {
+        height: 12,      
+        duration: 0.6,    
+        repeat: -1,   
+        delay: 0.05,     
+        yoyo: true,       
+        ease: ""
+    });
 
     function ouvrirMenu() {
 
