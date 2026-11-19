@@ -8,6 +8,8 @@
     <?php wp_head(); ?>
 </head>
 
+<!-- Test 3 -->
+
 <header class="fixed z-99 top-0 w-full">
 
     <div class="flex justify-between py-3 container z-99">
@@ -19,6 +21,7 @@
         </div>
 
         <div class="flex gap-5">
+            
 
             <!-- Barre de recherche en placeholder a date -->
             <div class="">
