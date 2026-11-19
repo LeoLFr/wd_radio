@@ -82,17 +82,23 @@ $num_frequences = $nosfrequences["num-frequences"] ?? "";
     <?php endif; ?>
 
     <div>
-        <?php if (!empty($accueilpub3)) : ?>
-            <img src="<?php echo esc_url($accueilpub3["url"] ?? $accueilpub3); ?>" alt="" class="w-full object-cover">
-        <?php endif; ?>
+        <div>
+            <?php if (!empty($accueilpub3)) : ?>
+                <img src="<?php echo esc_url($accueilpub3["url"] ?? $accueilpub3); ?>" alt="" class="w-full object-cover">
+            <?php endif; ?>
+        </div>
 
-        <?php if (!empty($accueilpub4)) : ?>
-            <img src="<?php echo esc_url($accueilpub4["url"] ?? $accueilpub4); ?>" alt="" class="w-full object-cover">
-        <?php endif; ?>
+        <div>
+            <?php if (!empty($accueilpub4)) : ?>
+                <img src="<?php echo esc_url($accueilpub4["url"] ?? $accueilpub4); ?>" alt="" class="w-full object-cover">
+            <?php endif; ?>
+        </div>
 
-        <?php if (!empty($accueilpub5)) : ?>
-            <img src="<?php echo esc_url($accueilpub5["url"] ?? $accueilpub5); ?>" alt="" class="w-full object-cover">
-        <?php endif; ?>
+        <div>
+            <?php if (!empty($accueilpub5)) : ?>
+                <img src="<?php echo esc_url($accueilpub5["url"] ?? $accueilpub5); ?>" alt="" class="w-full object-cover">
+            <?php endif; ?>
+        </div>
     </div>
 </article>
 

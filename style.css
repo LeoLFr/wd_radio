@@ -15,6 +15,8 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
@@ -218,6 +220,9 @@
   .right-0 {
     right: 0px;
   }
+  .z-10 {
+    z-index: 10;
+  }
   .z-20 {
     z-index: 20;
   }
@@ -241,6 +246,9 @@
     @media (width >= 96rem) {
       max-width: 96rem;
     }
+  }
+  .m-0 {
+    margin: 0px;
   }
   .m-50 {
     margin: calc(var(--spacing) * 50);
@@ -316,6 +324,12 @@
   }
   .h-\[90vh\] {
     height: 90vh;
+  }
+  .h-\[215px\] {
+    height: 215px;
+  }
+  .h-full {
+    height: 100%;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -433,6 +447,10 @@
     border-right-style: var(--tw-border-style);
     border-right-width: 9px;
   }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
   .border-b-9 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 9px;
@@ -467,6 +485,9 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-center {
+    object-position: center;
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -485,6 +506,9 @@
   .px-1 {
     padding-inline: var(--spacing);
   }
+  .px-\[5\%\] {
+    padding-inline: 5%;
+  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
@@ -493,6 +517,9 @@
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
+  }
+  .pt-30 {
+    padding-top: calc(var(--spacing) * 30);
   }
   .pt-32 {
     padding-top: calc(var(--spacing) * 32);
@@ -522,6 +549,10 @@
   .text-6xl {
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -586,6 +617,10 @@
     }
     .md\:text-start {
       text-align: start;
+    }
+    .md\:text-5xl {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
     .md\:text-7xl {
       font-size: var(--text-7xl);
