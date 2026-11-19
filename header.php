@@ -32,9 +32,9 @@
             <div class="bg-white px-1 py-3 flex rounded-lg h-12 items-center gap-5 cursor-pointer menu-JS">
                 <div class="ml-3 font-semibold">Menu</div>
                 <div class="flex gap-0.5 bg-black rounded-md h-10 w-10 items-center justify-center">
-                    <span class="bg-white h-4 w-0.5"></span>
-                    <span class="bg-white h-5 w-0.5"></span>
-                    <span class="bg-white h-2 w-0.5"></span>
+                    <span class="bg-white h-4 w-0.5 menu-icone-1-JS"></span>
+                    <span class="bg-white h-5 w-0.5 menu-icone-2-JS"></span>
+                    <span class="bg-white h-2 w-0.5 menu-icone-3-JS"></span>
                 </div>
             </div>
         </div>

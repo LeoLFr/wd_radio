@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <section>
     <div class="flex justify-center p-60">
     <h2 class="text-5xl">Cette page est introuvable</h2>
