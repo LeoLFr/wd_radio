@@ -45,6 +45,12 @@ $image_mission_2 = $notremission["image-mission-2"] ?? "";
 
     </div>
 
+<!-- Section : Notre équipe -->
+
+<h2 class="mb-2 font-bold text-xl mt-10"><?php the_title(); ?></h2>
+
+    <div class="flex flex-col gap-4 cols-2">
+
 </section>
 
 <?php get_footer(); ?>

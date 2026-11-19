@@ -23,6 +23,9 @@ wp-config.php
 # Node.js
 node_modules/
 
+# Style
+/style.css
+
 # Example themes
 /wp-content/themes/twenty*/
 
