@@ -72,4 +72,91 @@ $num_frequences = $nosfrequences["num-frequences"] ?? "";
     </div>
 </section>
 
+<section class="">
+    <div class="container py-20">
+
+        <h3 class="text-3xl font-semibold">——— Utilitaires</h3>
+
+        <div class="grid grid-cols-4 gap-5">
+
+        <div class="w-full bg-amber-100 p-2 rounded-md">
+            <span>Info 1</span>
+        </div>
+
+        <div class="w-full bg-amber-100 p-2 rounded-md">
+            <span>Info 2</span>
+        </div>
+
+        <div class="">
+
+            <div class="flex flex-col gap-10 items-center justify-center bg-amber-100 p-2 w-full aspect-square rounded-md">
+                <p id="meteo-emoji" class="text-6xl"></p>
+                <div class="flex flex-col gap-2 items-center justify-center">
+                    <p id="meteo-temp" class="text-3xl font-semibold">Chargement...</p>
+                    <p id="meteo-texte" class=""></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="">
+            <div class="flex flex-col gap-10 items-center justify-center bg-amber-100 p-2 w-full aspect-square rounded-md">
+                <p class="text-6xl">💨</p>
+                <div class="flex flex-col gap-2 items-center justify-center">
+                    <p class="text-3xl font-semibold" id="meteo-vent"></p>
+                    <h4>Vent</h4>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    const descriptions = {
+        0: ["Ciel dégagé", "☀️", "🌙"],
+        1: ["Plutôt dégagé", "🌤️", "🌙"],
+        2: ["Partiellement nuageux", "⛅", "☁️"],
+        3: ["Couvert", "☁️"],
+        45: ["Brouillard", "🌫️"],
+        51: ["Bruine", "🌦️"],
+        61: ["Pluie", "🌧️"],
+        63: ["Pluie", "🌧️"],
+        65: ["Pluie forte", "🌧️"],
+        71: ["Neige", "🌨️"],
+        73: ["Neige", "❄️"],
+        75: ["Neige forte", "❄️"],
+        80: ["Averses", "🌦️"],
+        95: ["Orage", "⛈️"]
+    };
+
+    const url = "https://api.open-meteo.com/v1/forecast?latitude=48.8467&longitude=-67.5333&current=temperature_2m,wind_speed_10m,weather_code,is_day&timezone=America/Toronto";
+
+    fetch(url)
+        .then(function (reponse) {
+            return reponse.json();
+        })
+        .then(function (data) {
+            const meteo = data.current;
+
+            const desc = descriptions[meteo.weather_code] || ["Météo indisponible", "❔"];
+
+            let emoji = desc[1];
+
+            if (meteo.is_day === 0 && desc[2]) {
+                emoji = desc[2];
+            }
+
+            document.getElementById("meteo-emoji").textContent = emoji;
+            document.getElementById("meteo-temp").textContent = Math.round(meteo.temperature_2m) + "°C";
+            document.getElementById("meteo-texte").textContent = desc[0];
+            document.getElementById("meteo-vent").textContent = Math.round(meteo.wind_speed_10m) + " km/h";
+        })
+        .catch(function () {
+            document.getElementById("meteo-temp").textContent = "Météo indisponible";
+        });
+</script>
+
 <?php get_footer(); ?>
