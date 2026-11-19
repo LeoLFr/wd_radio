@@ -59,11 +59,48 @@ $images = [
 </section>
 
 <?php
+$accueilpub1 = get_field("accueil-pub1-728x90");
+$accueilpub2 = get_field("accueil-pub2-728x90");
+$accueilpub3 = get_field("accueil-pub3-300x250");
+$accueilpub4 = get_field("accueil-pub4-300x250");
+$accueilpub5 = get_field("accueil-pub5-300x250");
+
+
 $nosfrequences = get_field("nos-frequences");
 
 $title_frequences = $nosfrequences["title-frequences"] ?? "";
 $num_frequences = $nosfrequences["num-frequences"] ?? "";
 ?>
+
+<article>
+    <?php if (!empty($accueilpub1)) : ?>
+        <img src="<?php echo esc_url($accueilpub1["url"] ?? $accueilpub1); ?>" alt="" class="w-full object-cover">
+    <?php endif; ?>
+
+    <?php if (!empty($accueilpub2)) : ?>
+        <img src="<?php echo esc_url($accueilpub2["url"] ?? $accueilpub2); ?>" alt="" class="w-full object-cover">
+    <?php endif; ?>
+
+    <div>
+        <div>
+            <?php if (!empty($accueilpub3)) : ?>
+                <img src="<?php echo esc_url($accueilpub3["url"] ?? $accueilpub3); ?>" alt="" class="w-full object-cover">
+            <?php endif; ?>
+        </div>
+
+        <div>
+            <?php if (!empty($accueilpub4)) : ?>
+                <img src="<?php echo esc_url($accueilpub4["url"] ?? $accueilpub4); ?>" alt="" class="w-full object-cover">
+            <?php endif; ?>
+        </div>
+
+        <div>
+            <?php if (!empty($accueilpub5)) : ?>
+                <img src="<?php echo esc_url($accueilpub5["url"] ?? $accueilpub5); ?>" alt="" class="w-full object-cover">
+            <?php endif; ?>
+        </div>
+    </div>
+</article>
 
 <section class="bg-(--color-purple) text-white">
     <div class="p-20">
@@ -79,36 +116,36 @@ $num_frequences = $nosfrequences["num-frequences"] ?? "";
 
         <div class="grid grid-cols-4 gap-5">
 
-        <div class="w-full bg-amber-100 p-2 rounded-md">
-            <span>Info 1</span>
-        </div>
-
-        <div class="w-full bg-amber-100 p-2 rounded-md">
-            <span>Info 2</span>
-        </div>
-
-        <div class="">
-
-            <div class="flex flex-col gap-10 items-center justify-center bg-amber-100 p-2 w-full aspect-square rounded-md">
-                <p id="meteo-emoji" class="text-6xl"></p>
-                <div class="flex flex-col gap-2 items-center justify-center">
-                    <p id="meteo-temp" class="text-3xl font-semibold">Chargement...</p>
-                    <p id="meteo-texte" class=""></p>
-                </div>
-
+            <div class="w-full bg-amber-100 p-2 rounded-md">
+                <span>Info 1</span>
             </div>
-        </div>
 
-        <div class="">
-            <div class="flex flex-col gap-10 items-center justify-center bg-amber-100 p-2 w-full aspect-square rounded-md">
-                <p class="text-6xl">💨</p>
-                <div class="flex flex-col gap-2 items-center justify-center">
-                    <p class="text-3xl font-semibold" id="meteo-vent"></p>
-                    <h4>Vent</h4>
+            <div class="w-full bg-amber-100 p-2 rounded-md">
+                <span>Info 2</span>
+            </div>
+
+            <div class="">
+
+                <div class="flex flex-col gap-10 items-center justify-center bg-amber-100 p-2 w-full aspect-square rounded-md">
+                    <p id="meteo-emoji" class="text-6xl"></p>
+                    <div class="flex flex-col gap-2 items-center justify-center">
+                        <p id="meteo-temp" class="text-3xl font-semibold">Chargement...</p>
+                        <p id="meteo-texte" class=""></p>
+                    </div>
+
                 </div>
             </div>
 
-        </div>
+            <div class="">
+                <div class="flex flex-col gap-10 items-center justify-center bg-amber-100 p-2 w-full aspect-square rounded-md">
+                    <p class="text-6xl">💨</p>
+                    <div class="flex flex-col gap-2 items-center justify-center">
+                        <p class="text-3xl font-semibold" id="meteo-vent"></p>
+                        <h4>Vent</h4>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </div>
@@ -135,10 +172,10 @@ $num_frequences = $nosfrequences["num-frequences"] ?? "";
     const url = "https://api.open-meteo.com/v1/forecast?latitude=48.8467&longitude=-67.5333&current=temperature_2m,wind_speed_10m,weather_code,is_day&timezone=America/Toronto";
 
     fetch(url)
-        .then(function (reponse) {
+        .then(function(reponse) {
             return reponse.json();
         })
-        .then(function (data) {
+        .then(function(data) {
             const meteo = data.current;
 
             const desc = descriptions[meteo.weather_code] || ["Météo indisponible", "❔"];
@@ -154,7 +191,7 @@ $num_frequences = $nosfrequences["num-frequences"] ?? "";
             document.getElementById("meteo-texte").textContent = desc[0];
             document.getElementById("meteo-vent").textContent = Math.round(meteo.wind_speed_10m) + " km/h";
         })
-        .catch(function () {
+        .catch(function() {
             document.getElementById("meteo-temp").textContent = "Météo indisponible";
         });
 </script>
