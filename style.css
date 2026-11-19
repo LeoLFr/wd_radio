@@ -8,7 +8,6 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-amber-100: oklch(96.2% 0.059 95.617);
     --color-black: #000;
     --color-white: #fff;
@@ -29,6 +28,8 @@
     --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
     --text-9xl: 8rem;
     --text-9xl--line-height: 1;
     --font-weight-semibold: 600;
@@ -263,9 +264,6 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
-  .mt-30 {
-    margin-top: calc(var(--spacing) * 30);
-  }
   .mt-50 {
     margin-top: calc(var(--spacing) * 50);
   }
@@ -314,8 +312,14 @@
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
+  .h-80 {
+    height: calc(var(--spacing) * 80);
+  }
   .h-120 {
     height: calc(var(--spacing) * 120);
+  }
+  .h-140 {
+    height: calc(var(--spacing) * 140);
   }
   .h-800 {
     height: calc(var(--spacing) * 800);
@@ -352,6 +356,9 @@
   }
   .w-70 {
     width: calc(var(--spacing) * 70);
+  }
+  .w-80 {
+    width: calc(var(--spacing) * 80);
   }
   .w-120 {
     width: calc(var(--spacing) * 120);
@@ -452,16 +459,9 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
   }
-  .border-b-5 {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 5px;
-  }
   .border-b-9 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 9px;
-  }
-  .border-red-400 {
-    border-color: var(--color-red-400);
   }
   .bg-\(--color-purple\) {
     background-color: var(--color-purple);
@@ -496,23 +496,11 @@
   .p-20 {
     padding: calc(var(--spacing) * 20);
   }
-  .p-50 {
-    padding: calc(var(--spacing) * 50);
-  }
   .p-60 {
     padding: calc(var(--spacing) * 60);
   }
   .px-1 {
     padding-inline: var(--spacing);
-  }
-  .px-6 {
-    padding-inline: calc(var(--spacing) * 6);
-  }
-  .px-50 {
-    padding-inline: calc(var(--spacing) * 50);
-  }
-  .px-90 {
-    padding-inline: calc(var(--spacing) * 90);
   }
   .px-\[5\%\] {
     padding-inline: 5%;
@@ -557,6 +545,10 @@
   .text-6xl {
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+  .text-8xl {
+    font-size: var(--text-8xl);
+    line-height: var(--tw-leading, var(--text-8xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
