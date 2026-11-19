@@ -6,12 +6,12 @@ Template Name: À propos
 
 get_header();
 
+// call pour récupérer les champs ACF de mission
 $notremission = get_field("notre-mission");
-
 $title_mission = $notremission["title-mission"] ?? "";
-
 $image_mission_1 = $notremission["image-mission-1"] ?? "";
 $image_mission_2 = $notremission["image-mission-2"] ?? "";
+
 
 ?>
 
@@ -45,12 +45,6 @@ $image_mission_2 = $notremission["image-mission-2"] ?? "";
 
     </div>
 
-<!-- Section : Notre équipe -->
-
-<h2 class="mb-2 font-bold text-xl mt-10"><?php the_title(); ?></h2>
-
-    <div class="flex flex-col gap-4 cols-2">
-
-</section>
+<!-- Section : Conseil d'administration -->
 
 <?php get_footer(); ?>
