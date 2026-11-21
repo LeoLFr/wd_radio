@@ -15,7 +15,7 @@ $images = [
 
 <section class="relative w-full h-[70vh] overflow-hidden">
 
-    <div class="absolute inset-0 overflow-hidden h-800 brightness-70">
+    <div class="absolute inset-0 overflow-hidden h-800 z-0">
 
         <?php foreach ($images as $image): ?>
             <?php if ($image): ?>
@@ -29,15 +29,17 @@ $images = [
 
     </div>
 
+    <div class="absolute inset-0 z-10 bg-black/30 pointer-events-none"></div>
+
 
 
     <div class="relative z-20 h-[70vh] flex flex-col container mt-[10vh] mix-blend-difference">
 
 
 
-        <div class="text-5xl md:text-7xl xl:text-9xl text-white  flex flex-col uppercase">
-            <h1 class="">Radio Communautaire</h1>
-            <div class="flex flex-col justify-end items-end">
+        <div class="text-5xl md:text-7xl xl:text-[6vw] text-white uppercase grid grid-cols-4 flex-col w-full">
+            <h1 class="col-span-4">Radio Communautaire</h1>
+            <div class="flex flex-col col-span-2 col-start-3">
                 <h1 class="">de la Matanie</h1>
             </div>
         </div>
