@@ -16,6 +16,7 @@ $image_mission_2 = $notremission["image-mission-2"] ?? "";
 $conseiladmin = get_field("conseil-admin");
 $title_admin = $conseiladmin["title-admin"] ?? "";
 $nom_admin = $conseiladmin["nom-admin"] ?? [];
+$poste_admin = $conseiladmin["poste-admin"] ?? [];
 $description_admin = $conseiladmin["description-admin"] ?? [];
 $membre_admin_1 = $conseiladmin["membre-admin-1"] ?? "";
 $membre_admin_2 = $conseiladmin["membre-admin-2"] ?? "";
@@ -100,14 +101,6 @@ $membres = [
     $membre_admin_4,
     $membre_admin_5
 ];
-
-$postes = [
-    $poste_admin_1,
-    $poste_admin_2,
-    $poste_admin_3,
-    $poste_admin_4,
-    $poste_admin_5
-];
 ?>
 
 <section>
@@ -115,29 +108,33 @@ $postes = [
 
 <div class="flex flex-col md:flex-row gap-4 mt-4 bg-beige">
 
-    <?php foreach ($membres as $index => $membre) : ?>
+<?php foreach ($membres as $index => $membre) : ?>
 
-        <div class="flex flex-col gap-2 items-center text-center">
+    <div class="flex flex-col gap-2 items-center text-center">
 
-            <?php if (!empty($membre)) : ?>
-                <img src="<?php echo esc_url($membre['url'] ?? $membre); ?>" alt="" class="w-120 h-120 rounded-sm object-cover">
-            <?php endif; ?>
+        <?php if (!empty($membre)) : ?>
+            <img 
+                src="<?php echo esc_url($membre['url'] ?? $membre); ?>" 
+                alt="" 
+                class="w-120 h-120 rounded-sm object-cover"
+            >
+        <?php endif; ?>
 
-            <h4 class="font-bold color-dark text-lg">
-                <?php echo esc_html($nom_admin[$index]['nom-admin'] ?? ''); ?>
-            </h4>
+        <h4 class="font-bold color-dark text-lg">
+            <?php echo esc_html($nom_admin[$index]['nom-admin'] ?? ''); ?>
+        </h4>
 
-            <p class="text-sm italic">
-                <?php echo esc_html($postes[$index] ?? ''); ?>
-            </p>
+        <p class="text-sm italic">
+            <?php echo esc_html($poste_admin[$index]['poste-admin'] ?? ''); ?>
+        </p>
 
-            <p>
-                <?php echo esc_html($description_admin[$index]['description-admin'] ?? ''); ?>
-            </p>
+        <p>
+            <?php echo esc_html($description_admin[$index]['description-admin'] ?? ''); ?>
+        </p>
 
-        </div>
+    </div>
 
-    <?php endforeach; ?>
+<?php endforeach; ?>
 
 </div>
 </section>
