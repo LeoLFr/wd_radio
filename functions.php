@@ -50,6 +50,13 @@ function radio_enqueue_scripts_styles()
 
 add_action("wp_enqueue_scripts", "radio_enqueue_scripts_styles");
 
+// Lenis
+function enqueue_lenis_scripts() {
+    wp_enqueue_script('lenis', get_template_directory_uri() . '/assets/scripts/lenis.js', array(), null, true);
+    wp_enqueue_script('lenis-init', get_template_directory_uri() . '/assets/scripts/lenis.js', array('lenis'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_lenis_scripts');
+
 function radio_setup_theme()
 {
     add_theme_support("title-tag");
