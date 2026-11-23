@@ -39,6 +39,13 @@ function radio_enqueue_scripts_styles()
         filemtime(get_template_directory() . "/assets/scripts/menu.js"),
         true
     );
+
+    wp_enqueue_script(
+        "carrousel",
+        get_template_directory_uri() . "/assets/scripts/carrousel.js",
+        filemtime(get_template_directory() . "/assets/scripts/carrousel.js"),
+        true
+    );
 }
 
 add_action("wp_enqueue_scripts", "radio_enqueue_scripts_styles");

@@ -37,7 +37,7 @@
 
     </div>
 
-    <div class="menu-overlay invisible fixed inset-0 bg-purple text-beige">
+    <div class="menu-overlay invisible fixed inset-0 bg-purple text-white">
         <div class="container pt-32">
             <?php wp_nav_menu([
                 'menu_class' => 'flex flex-col gap-4 text-2xl uppercase',
