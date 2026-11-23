@@ -81,25 +81,7 @@ $num_frequences = $nosfrequences["num-frequences"] ?? "";
         <img src="<?php echo esc_url($accueilpub2["url"] ?? $accueilpub2); ?>" alt="" class="w-full object-cover">
     <?php endif; ?>
 
-    <div>
-        <div>
-            <?php if (!empty($accueilpub3)) : ?>
-                <img src="<?php echo esc_url($accueilpub3["url"] ?? $accueilpub3); ?>" alt="" class="w-full object-cover">
-            <?php endif; ?>
-        </div>
 
-        <div>
-            <?php if (!empty($accueilpub4)) : ?>
-                <img src="<?php echo esc_url($accueilpub4["url"] ?? $accueilpub4); ?>" alt="" class="w-full object-cover">
-            <?php endif; ?>
-        </div>
-
-        <div>
-            <?php if (!empty($accueilpub5)) : ?>
-                <img src="<?php echo esc_url($accueilpub5["url"] ?? $accueilpub5); ?>" alt="" class="w-full object-cover">
-            <?php endif; ?>
-        </div>
-    </div>
 </article>
 
 <section class="bg-(--color-purple) text-white">
@@ -108,6 +90,28 @@ $num_frequences = $nosfrequences["num-frequences"] ?? "";
         <p class="text-center text-6xl font-bold m-50"><?php echo esc_html($num_frequences); ?></p>
     </div>
 </section>
+
+<article>
+    <div class="flex">
+        <div class="w-1/3">
+            <?php if (!empty($accueilpub3)) : ?>
+                <img src="<?php echo esc_url($accueilpub3["url"] ?? $accueilpub3); ?>" alt="" class="w-full object-cover">
+            <?php endif; ?>
+        </div>
+
+        <div class="w-1/3">
+            <?php if (!empty($accueilpub4)) : ?>
+                <img src="<?php echo esc_url($accueilpub4["url"] ?? $accueilpub4); ?>" alt="" class="w-full object-cover">
+            <?php endif; ?>
+        </div>
+
+        <div class="w-1/3">
+            <?php if (!empty($accueilpub5)) : ?>
+                <img src="<?php echo esc_url($accueilpub5["url"] ?? $accueilpub5); ?>" alt="" class="w-full object-cover">
+            <?php endif; ?>
+        </div>
+    </div>
+</article>
 
 <section class="">
     <div class="container py-20">
