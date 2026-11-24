@@ -5,16 +5,42 @@
         <div class="flex flex-col gap-3">
              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo-white.svg" class="flex justify-start object-contain w-45 h-45 ">
         <p>&copy; <?php echo date('Y'); ?> </p>
-        <p class="border-b-2">INSCRIVEZ-VOUS À NOTRE INFOLETTRE</p>
-        <p>ENTREZ VOTRE EMAIL ...</p>
-        <FaYoutube class="text-4xl" />
+
+        <div class="flex py-3">
+            <p class="border-b-2">INSCRIVEZ-VOUS À NOTRE INFOLETTRE</p>
+        </div>
+        <div class="flex py-3">
+            <p>ENTREZ VOTRE EMAIL ...</p>
+        </div>
+        
+        <div class="flex gap-4">
+
+            <a href="https://www.youtube.com/" target="_blank">
+                <i class="fa-brands fa-youtube text-4xl"></i>
+            </a>
+        
+            <a href="#">
+                <i class="fa-brands fa-instagram text-4xl"></i>
+            </a>
+        
+            <a href="#">
+                <i class="fa-brands fa-facebook text-4xl"></i>
+            </a>
+        </div>
+ 
         </div>
         <div class="flex flex-col gap-5 justify-end items-end ml-auto">
-            <p>Confidentialité</p>
-            <p>Accessibilité</p>
-            <p>radiolamatanie@gmail.com</p>
-            <p>581-232-7434</p>
-            <p>Association des radios communautaires du Québec (ARCQ)</p>
+            <div>
+                <p>Confidentialité</p>
+                <p>Accessibilité</p>
+            </div>
+            <div>
+                <p>radiolamatanie@gmail.com</p>
+                <p>581-232-7434</p>
+            </div>
+            <div>
+                <p>Association des radios communautaires du Québec (ARCQ)</p>
+            </div>
         </div>
     </footer>
 
