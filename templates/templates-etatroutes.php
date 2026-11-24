@@ -37,40 +37,39 @@ get_header();
     if ($query->have_posts()):
 
     ?>
+        <div class="grid grid-cols-2 gap-12">
 
-        <?php while ($query->have_posts()) : $query->the_post(); ?>
+            <?php while ($query->have_posts()) : $query->the_post(); ?>
 
-            <article class="">
+                <article class="flex bg-(--color-beige) p-5 rounded-2xl">
+                    <div class="mr-10 w-80">
+                        <?php
 
-                <?php
+                        the_post_thumbnail();
 
-                the_post_thumbnail();
+                        ?>
+                    </div>
+                    <div class="content">
 
-                ?>
+                        <p class="text-2xl font-semibold mb-5"><?php the_title(); ?></p>
 
-                <div class="content">
+                        <p><?php the_excerpt(); ?></p>
 
-                    <p class="title"><?php the_title(); ?></p>
+                        <a href="<?php echo esc_url(get_permalink()) ?>" class="">Plus de détails</a>
 
-                    <p><?php the_excerpt(); ?></p>
-
-                    <a href="<?php echo esc_url(get_permalink()) ?>" class="">Plus de détails</a>
-
-                </div>
-
-
-
-            </article>
+                    </div>
 
 
 
-        <?php
+                </article>
 
-        endwhile;
 
-        wp_reset_postdata();
 
-        ?>
+            <?php endwhile; ?>
+
+            <?php wp_reset_postdata(); ?>
+
+        </div>
 
     <?php endif; ?>
 
