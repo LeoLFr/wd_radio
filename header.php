@@ -8,7 +8,7 @@
     <?php wp_head(); ?>
 </head>
 
-<header class="fixed z-99 top-0 w-full">
+<header class="fixed z-99 top-10 w-full">
 
     <div class="relative z-10 flex justify-between py-3 container">
 

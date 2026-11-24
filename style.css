@@ -220,8 +220,14 @@
   .inset-0 {
     inset: 0px;
   }
+  .-top-10 {
+    top: calc(var(--spacing) * -10);
+  }
   .top-0 {
     top: 0px;
+  }
+  .top-10 {
+    top: calc(var(--spacing) * 10);
   }
   .bottom-0 {
     bottom: 0px;
