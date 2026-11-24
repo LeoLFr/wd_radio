@@ -94,7 +94,6 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 </section>
 </section>
 
-
 <!-- section : conseil d'administration -->
 
 <?php
