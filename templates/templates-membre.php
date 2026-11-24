@@ -8,14 +8,16 @@ get_header();
 
 
 $form_membre = get_field("form-membre");
-$title_form_membre = $title_form_membre["form-title-membre"] ?? "";
-$image_mission_1 = $["form-description-membre-rep"] ?? "";
-$link_form_membre = $link_form_membre["link-form-membre"] ?? "";
 
-$conseiladmin = get_field("conseil-admin");
-$title_admin = $conseiladmin["title-admin"] ?? "";
-$nom_admin = $conseiladmin["nom-admin"] ?? [];
+$title_form_membre = $form_membre["form-title-membre"] ?? "";
+$form_description_membre_rep = $form_membre["form-description-membre-rep"] ?? [];
+$link_form_membre = $form_membre["link-form-membre"] ?? "";
 
+$form_partenaire = get_field("form-partenaire");
+
+$title_form_partenaire = $form_partenaire["form-title-partenaire"] ?? "";
+$form_description_partenaire_rep = $form_partenaire["form-description-partenaire-rep"] ?? [];
+$link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
 
 ?>
 
@@ -54,18 +56,45 @@ $nom_admin = $conseiladmin["nom-admin"] ?? [];
 
     <div>
         <div>
-            <h2></h2>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <h2 class="mb-4 font-bold text-xl text-dark">
+                <?php echo esc_html($title_form_membre); ?>
+            </h2>
+
+            <?php if (!empty($form_description_membre_rep)) : ?>
+                <?php foreach ($form_description_membre_rep as $description) : ?>
+
+                    <p><?php echo esc_html($description["form-description-membre"] ?? ""); ?></p>
+
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+            <?php if (!empty($link_form_membre)) : ?>
+
+                <a href="<?php echo esc_url($link_form_membre["url"]); ?>" target="<?php echo esc_attr($link_form_membre["target"] ?: "_self"); ?>"
+                class="inline-block mt-5"><?php echo esc_html($link_form_membre["title"]); ?> </a>
+
+            <?php endif; ?>
         </div>
 
         <div>
-            <h2></h2>
-            <p></p>
-            <p></p>
-            <p></p>
+            <h2 class="mb-4 font-bold text-xl text-dark">
+                <?php echo esc_html($title_form_partenaire); ?>
+            </h2>
+
+            <?php if (!empty($form_description_partenaire_rep)) : ?>
+                <?php foreach ($form_description_partenaire_rep as $description) : ?>
+
+                    <p><?php echo esc_html($description["form-description-partenaire"] ?? ""); ?></p>
+
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+            <?php if (!empty($link_form_partenaire)) : ?>
+
+                <a href="<?php echo esc_url($link_form_partenaire["url"]); ?>" target="<?php echo esc_attr($link_form_partenaire["target"] ?: "_self"); ?>"
+                class="inline-block mt-5"><?php echo esc_html($link_form_partenaire["title"]); ?> </a>
+                
+            <?php endif; ?>
         </div>
     </div>
 
