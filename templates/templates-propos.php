@@ -56,7 +56,7 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 
 <!-- section : notre mission -->
 
-<section class="bg-beige px-[5%] py-16">
+<section class="bg-beige container">
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
 
@@ -76,7 +76,9 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 
         </div>
 
-        <div class="w-full min-w-0">
+        <section class="bg-beige container">
+
+<div class="grid grid-cols-1 md:grid-cols-2">
 
         <div class="flex flex-row gap-4 w-full">
             <?php if (!empty($image_mission_1)) : ?>
@@ -89,6 +91,7 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
         </div>
     </div>
 </div>
+</section>
 </section>
 
 <!-- section : conseil d'administration -->
@@ -103,10 +106,10 @@ $membres = [
 ];
 ?>
 
-<section>
-<h2 class="mb-2 font-bold text-xl mt-10 color-dark bg-beige"><?php echo esc_html($title_admin); ?></h2>
+<section class="bg-beige container">
+<h2 class="mb-2 font-bold text-xl mt-10 color-dark"><?php echo esc_html($title_admin); ?></h2>
 
-<div class="flex flex-col md:flex-row gap-4 mt-4 bg-beige">
+<div class="flex flex-col md:flex-row gap-4 mt-4">
 
 <?php foreach ($membres as $index => $membre) : ?>
 

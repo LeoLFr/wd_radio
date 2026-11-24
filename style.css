@@ -30,8 +30,6 @@
     --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-sm: 0.25rem;
@@ -224,9 +222,6 @@
   .z-0 {
     z-index: 0;
   }
-  .z-1 {
-    z-index: 1;
-  }
   .z-2 {
     z-index: 2;
   }
@@ -350,23 +345,8 @@
   .h-\[5vh\] {
     height: 5vh;
   }
-  .h-\[20vh\] {
-    height: 20vh;
-  }
-  .h-\[25vh\] {
-    height: 25vh;
-  }
   .h-\[30vh\] {
     height: 30vh;
-  }
-  .h-\[35vh\] {
-    height: 35vh;
-  }
-  .h-\[40vh\] {
-    height: 40vh;
-  }
-  .h-\[45vh\] {
-    height: 45vh;
   }
   .h-\[70vh\] {
     height: 70vh;
@@ -418,6 +398,9 @@
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -522,9 +505,6 @@
   .bg-purple {
     background-color: var(--Purple);
   }
-  .bg-white {
-    background-color: var(--color-white);
-  }
   .object-cover {
     object-fit: cover;
   }
@@ -546,6 +526,9 @@
   .px-1 {
     padding-inline: var(--spacing);
   }
+  .px-16 {
+    padding-inline: calc(var(--spacing) * 16);
+  }
   .px-\[5\%\] {
     padding-inline: 5%;
   }
@@ -566,6 +549,9 @@
   }
   .pt-32 {
     padding-top: calc(var(--spacing) * 32);
+  }
+  .pr-16 {
+    padding-right: calc(var(--spacing) * 16);
   }
   .text-center {
     text-align: center;
@@ -661,6 +647,9 @@
     .md\:w-full {
       width: 100%;
     }
+    .md\:grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
     .md\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -681,10 +670,6 @@
     .md\:text-7xl {
       font-size: var(--text-7xl);
       line-height: var(--tw-leading, var(--text-7xl--line-height));
-    }
-    .md\:text-8xl {
-      font-size: var(--text-8xl);
-      line-height: var(--tw-leading, var(--text-8xl--line-height));
     }
   }
   @media (width >= 64rem) {
@@ -722,6 +707,7 @@
     max-width: 100em;
     min-width: 100%;
     padding-inline: 3vw;
+    padding-block: 3vw;
     @media (width >= 64rem) {
       padding-inline: 6vw;
     }
