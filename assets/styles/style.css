@@ -29,7 +29,7 @@ Version: 1.0
 @layer utilities {
 
 .container {
-    @apply max-w-[100em] w-full mx-auto lg:px-[6vw] px-[3vw] min-w-full;
+    @apply max-w-[100em] w-full mx-auto lg:px-[6vw] px-[3vw] py-[3vw] min-w-full;
 }
 
 }
