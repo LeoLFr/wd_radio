@@ -7,6 +7,16 @@ Template Name: Devenir membre
 get_header();
 
 
+$form_membre = get_field("form-membre");
+$title_form_membre = $title_form_membre["form-title-membre"] ?? "";
+$image_mission_1 = $["form-description-membre-rep"] ?? "";
+$link_form_membre = $link_form_membre["link-form-membre"] ?? "";
+
+$conseiladmin = get_field("conseil-admin");
+$title_admin = $conseiladmin["title-admin"] ?? "";
+$nom_admin = $conseiladmin["nom-admin"] ?? [];
+
+
 ?>
 
 
