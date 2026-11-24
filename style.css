@@ -345,6 +345,9 @@
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
+  .h-45 {
+    height: calc(var(--spacing) * 45);
+  }
   .h-120 {
     height: calc(var(--spacing) * 120);
   }
@@ -392,6 +395,9 @@
   }
   .w-19 {
     width: calc(var(--spacing) * 19);
+  }
+  .w-45 {
+    width: calc(var(--spacing) * 45);
   }
   .w-70 {
     width: calc(var(--spacing) * 70);
@@ -443,6 +449,9 @@
   }
   .justify-end {
     justify-content: flex-end;
+  }
+  .justify-start {
+    justify-content: flex-start;
   }
   .gap-0\.5 {
     gap: calc(var(--spacing) * 0.5);
@@ -519,6 +528,9 @@
   }
   .bg-purple {
     background-color: var(--Purple);
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .object-cover {
     object-fit: cover;
