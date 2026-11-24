@@ -58,39 +58,39 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 
 <section class="bg-beige container">
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
 
-<div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4">
 
-    <h2 class="mb-4 font-bold text-xl color-dark"><?php echo esc_html($title_mission); ?></h2>
+            <h2 class="mb-4 font-bold text-xl color-dark"><?php echo esc_html($title_mission); ?></h2>
 
-        <?php if (!empty($notremission["description-mission"])) : ?>
+            <?php if (!empty($notremission["description-mission"])) : ?>
 
-            <?php foreach ($notremission["description-mission"] as $description_mission) : ?>
+                <?php foreach ($notremission["description-mission"] as $description_mission) : ?>
 
-                <p><?php echo esc_html($description_mission["description-mission"]); ?></p>
+                    <p><?php echo esc_html($description_mission["description-mission"]); ?></p>
 
-            <?php endforeach; ?>
+                <?php endforeach; ?>
 
-        <?php endif; ?>
+            <?php endif; ?>
 
         </div>
 
         <section class="bg-beige container">
 
-<div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="grid grid-cols-1 md:grid-cols-2">
 
-        <div class="flex flex-row gap-4 w-full">
-            <?php if (!empty($image_mission_1)) : ?>
-                <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="" class="w-90 h-60 rounded-sm object-cover">
-            <?php endif; ?>
+                <div class="flex flex-row gap-4 w-full">
+                    <?php if (!empty($image_mission_1)) : ?>
+                        <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="" class="w-90 h-60 rounded-sm object-cover">
+                    <?php endif; ?>
 
-            <?php if (!empty($image_mission_2)) : ?>
-                <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="" class="w-90 h-60 rounded-sm object-cover">
-            <?php endif; ?>
-        </div>
+                    <?php if (!empty($image_mission_2)) : ?>
+                        <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="" class="w-90 h-60 rounded-sm object-cover">
+                    <?php endif; ?>
+                </div>
+            </div>
     </div>
-</div>
 </section>
 </section>
 
