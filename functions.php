@@ -57,6 +57,17 @@ function enqueue_lenis_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_lenis_scripts');
 
+function charger_font_awesome() {
+    wp_enqueue_style(
+        'font-awesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css',
+        array(),
+        '6.7.2'
+    );
+}
+add_action('wp_enqueue_scripts', 'charger_font_awesome');
+
+
 function radio_setup_theme()
 {
     add_theme_support("title-tag");

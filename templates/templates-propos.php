@@ -82,11 +82,11 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 
         <div class="flex flex-row gap-4 w-full">
             <?php if (!empty($image_mission_1)) : ?>
-                <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="" class="w-120 h-120 rounded-sm object-cover">
+                <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="" class="w-90 h-60 rounded-sm object-cover">
             <?php endif; ?>
 
             <?php if (!empty($image_mission_2)) : ?>
-                <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="" class="w-120 h-120 rounded-sm object-cover">
+                <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="" class="w-90 h-60 rounded-sm object-cover">
             <?php endif; ?>
         </div>
     </div>
@@ -94,52 +94,103 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 </section>
 </section>
 
+
+<!-- section : conseil d'administration -->
+
+
 <!-- section : conseil d'administration -->
 
 <?php
 $membres = [
-    $membre_admin_1,
-    $membre_admin_2,
-    $membre_admin_3,
-    $membre_admin_4,
-    $membre_admin_5
+    [
+        'image' => $membre_admin_1,
+        'nom' => $nom_admin[0]['nom-admin'] ?? '',
+        'poste' => $poste_admin[0]['poste-admin'] ?? '',
+        'description' => $description_admin[0]['description-admin'] ?? ''
+    ],
+    [
+        'image' => $membre_admin_2,
+        'nom' => $nom_admin[1]['nom-admin'] ?? '',
+        'poste' => $poste_admin[1]['poste-admin'] ?? '',
+        'description' => $description_admin[1]['description-admin'] ?? ''
+    ],
+    [
+        'image' => $membre_admin_3,
+        'nom' => $nom_admin[2]['nom-admin'] ?? '',
+        'poste' => $poste_admin[2]['poste-admin'] ?? '',
+        'description' => $description_admin[2]['description-admin'] ?? ''
+    ],
+    [
+        'image' => $membre_admin_4,
+        'nom' => $nom_admin[3]['nom-admin'] ?? '',
+        'poste' => $poste_admin[3]['poste-admin'] ?? '',
+        'description' => $description_admin[3]['description-admin'] ?? ''
+    ],
+    [
+        'image' => $membre_admin_5,
+        'nom' => $nom_admin[4]['nom-admin'] ?? '',
+        'poste' => $poste_admin[4]['poste-admin'] ?? '',
+        'description' => $description_admin[4]['description-admin'] ?? ''
+    ]
 ];
 ?>
 
-<section class="bg-beige container">
-<h2 class="mb-2 font-bold text-xl mt-10 color-dark"><?php echo esc_html($title_admin); ?></h2>
+<section class="bg-beige container py-12">
 
-<div class="flex flex-col md:flex-row gap-4 mt-4">
+    <h2 class="mb-10 font-bold text-xl color-dark">
+        <?php echo esc_html($title_admin); ?>
+    </h2>
 
-<?php foreach ($membres as $index => $membre) : ?>
+    <?php if (!empty($membres)) : ?>
 
-    <div class="flex flex-col gap-2 items-center text-center">
+        <div class="relative max-w-6xl mx-auto" id="carrousel-membres">
 
-        <?php if (!empty($membre)) : ?>
-            <img 
-                src="<?php echo esc_url($membre['url'] ?? $membre); ?>" 
-                alt="" 
-                class="w-120 h-120 rounded-sm object-cover"
-            >
-        <?php endif; ?>
+            <div class="relative">
 
-        <h4 class="font-bold color-dark text-lg">
-            <?php echo esc_html($nom_admin[$index]['nom-admin'] ?? ''); ?>
-        </h4>
+                <?php foreach ($membres as $index => $membre) : ?>
 
-        <p class="text-sm italic">
-            <?php echo esc_html($poste_admin[$index]['poste-admin'] ?? ''); ?>
-        </p>
+                    <div class="membre-slide <?php echo $index === 0 ? 'flex' : 'hidden'; ?> flex-col md:flex-row items-center gap-8 md:gap-12" data-slide="<?php echo $index; ?>">
 
-        <p>
-            <?php echo esc_html($description_admin[$index]['description-admin'] ?? ''); ?>
-        </p>
+                        <div class="w-full md:w-1/2">
+                            <img src="<?php echo esc_url($membre['image']['url'] ?? $membre['image']); ?>" alt="<?php echo esc_attr($membre['nom']); ?>" class="w-full h-87 md:h-87 object-cover rounded-lg">
+                        </div>
 
-    </div>
+                        <div class="w-full md:w-1/2 flex flex-col gap-4">
 
-<?php endforeach; ?>
+                            <h3 class="text-3xl md:text-4xl font-bold color-dark">
+                                <?php echo esc_html($membre['nom']); ?>
+                            </h3>
 
-</div>
+                            <p class="text-lg italic color-dark">
+                                <?php echo esc_html($membre['poste']); ?>
+                            </p>
+
+                            <div class="text-base leading-relaxed">
+                                <?php echo wp_kses_post($membre['description']); ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <div class="flex justify-center items-center gap-6 mt-8">
+
+                <button type="button" data-carousel-prev aria-label="Membre précédent" class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-gray-100 transition">&#8592;
+                </button>
+
+                <span class="text-sm color-dark" data-carousel-counter>1 / <?php echo count($membres); ?></span>
+
+                <button type="button" data-carousel-next aria-label="Membre suivant" class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-gray-100 transition">&#8594;
+                </button>
+
+            </div>
+
+        </div>
+
+    <?php endif; ?>
+
 </section>
+
+
 
 <?php get_footer(); ?>
