@@ -39,9 +39,23 @@ function radio_enqueue_scripts_styles()
         filemtime(get_template_directory() . "/assets/scripts/menu.js"),
         true
     );
+
+    wp_enqueue_script(
+        "carrousel",
+        get_template_directory_uri() . "/assets/scripts/carrousel.js",
+        filemtime(get_template_directory() . "/assets/scripts/carrousel.js"),
+        true
+    );
 }
 
 add_action("wp_enqueue_scripts", "radio_enqueue_scripts_styles");
+
+// Lenis
+function enqueue_lenis_scripts() {
+    wp_enqueue_script('lenis', get_template_directory_uri() . '/assets/scripts/lenis.js', array(), null, true);
+    wp_enqueue_script('lenis-init', get_template_directory_uri() . '/assets/scripts/lenis.js', array('lenis'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_lenis_scripts');
 
 function radio_setup_theme()
 {

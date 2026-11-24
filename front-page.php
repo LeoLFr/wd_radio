@@ -156,6 +156,10 @@ $title_utilitaires = $utilitaires["title-utilitaires"] ?? "";
 
             </div>
         </div>
+        <div class="grid grid-cols-3 gap-5 mx-50 whitespace-nowrap">
+            <a class="text-xl color border-4 rounded-xl rounded-tl-none bg-orange-light p-2 mx-30 my-10 text-center border-b-9 border-r-9" href="./etat-des-routes">VOIR PLUS</a>
+
+        </div>
 
     </div>
 </section>

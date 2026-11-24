@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <div class="search-results" id="search-results">
 
     <h2>Résultats de la recherche</h2>
