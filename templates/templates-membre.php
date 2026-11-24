@@ -35,7 +35,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
 
 <section class="bg-beige container min-h-screen z-10 relative">
 
-    <div class="h-[5vh]"></div>
+    <div class="h-[10vh]"></div>
 
     <h1 class="text-4xl md:text-6xl font-bold uppercase m-0 mb-15">
         <?php the_title(); ?>
