@@ -37,21 +37,21 @@ get_header();
     if ($query->have_posts()):
 
     ?>
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-2 gap-12">
 
             <?php while ($query->have_posts()) : $query->the_post(); ?>
 
-                <article class="">
+                <article class="flex bg-(--color-beige) p-5 rounded-2xl">
+                    <div class="mr-10 w-80">
+                        <?php
 
-                    <?php
+                        the_post_thumbnail();
 
-                    the_post_thumbnail();
-
-                    ?>
-
+                        ?>
+                    </div>
                     <div class="content">
 
-                        <p class="title"><?php the_title(); ?></p>
+                        <p class="text-2xl font-semibold mb-5"><?php the_title(); ?></p>
 
                         <p><?php the_excerpt(); ?></p>
 
