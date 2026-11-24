@@ -6,7 +6,6 @@ Template Name: Devenir membre
 
 get_header();
 
-
 $form_membre = get_field("form-membre");
 
 $title_form_membre = $form_membre["form-title-membre"] ?? "";
@@ -21,27 +20,15 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
 
 ?>
 
-
 <?php if (has_post_thumbnail()) : ?>
-    <section class="z-5 relative">
 
-    <div class="fixed">
-        <div class="bg-black/30 top-0 left-0 fixed w-full h-[30vh] overflow-hidden pointer-events-none z-3"></div>
+    <?php the_post_thumbnail('full', [
+        'class' => 'fixed top-0 left-0 w-full h-[30vh] object-cover object-center z-2',
+        'alt' => get_the_title()
+    ]); ?>
 
-        <?php the_post_thumbnail('full', [
-            'class' => 'fixed inset-0 w-full h-[30vh] object-cover object-center z-2',
-            'alt' => get_the_title()
-        ]); ?>
-    </div>
+    <div class="fixed top-0 left-0 w-full h-[30vh] bg-black/30 pointer-events-none z-3"></div>
 
-    <div class="absolute container bottom-0">
-        <div class="relative "></div>
-
-    </div>
-
-
-
-    </section>
 <?php endif; ?>
 
 <div class="h-[30vh]"></div>
@@ -49,7 +36,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
 <section class="bg-beige container min-h-screen z-10 relative">
 
     <div class="h-[5vh]"></div>
-    
+
     <h1 class="text-4xl md:text-6xl font-bold uppercase m-0 mb-15">
         <?php the_title(); ?>
     </h1>
@@ -93,12 +80,11 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
 
                 <a href="<?php echo esc_url($link_form_partenaire["url"]); ?>" target="<?php echo esc_attr($link_form_partenaire["target"] ?: "_self"); ?>"
                 class="inline-block mt-10 color border-3 rounded-lg rounded-tl-none bg-beige p-2 my-10 text-center border-b-5 border-r-5"><?php echo esc_html($link_form_partenaire["title"]); ?> </a>
-                
+
             <?php endif; ?>
         </div>
     </div>
 
 </section>
-
 
 <?php get_footer(); ?>

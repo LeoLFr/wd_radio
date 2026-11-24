@@ -882,7 +882,6 @@
     max-width: 100em;
     min-width: 100%;
     padding-inline: 3vw;
-    padding-block: 3vw;
     @media (width >= 64rem) {
       padding-inline: 6vw;
     }

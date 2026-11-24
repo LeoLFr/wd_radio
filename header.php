@@ -12,7 +12,7 @@
 
 <header class="fixed z-99 top-0 w-full">
 
-    <div class="relative z-10 flex justify-between py-3 container">
+    <div class="relative z-10 flex justify-between py-5 container">
 
         <div class="flex items-center">
             <div class="h-12 w-19 object-cover flex items-center bg-beige rounded-lg px-1 py-3 cursor-pointer">
