@@ -118,24 +118,24 @@ $title_utilitaires = $utilitaires["title-utilitaires"] ?? "";
     </div>
 </article>
 
-<section class="">
+<section class="bg-[#FDBE00]">
     <div class="container py-20">
 
         <h3 class="text-3xl font-semibold mb-20"><?php echo esc_html($title_utilitaires); ?></h3>
 
         <div class="grid grid-cols-4 gap-5">
 
-            <div class="w-full bg-amber-100 p-2 rounded-md">
+            <div class="w-full bg-amber-100 p-2 rounded-md border-3 border-b-7 border-r-7">
                 <span>Info 1</span>
             </div>
 
-            <div class="w-full bg-amber-100 p-2 rounded-md">
+            <div class="w-full bg-amber-100 p-2 rounded-md border-3 border-b-7 border-r-7">
                 <span>Info 2</span>
             </div>
 
             <div class="">
 
-                <div class="flex flex-col gap-10 items-center justify-center bg-amber-100 p-2 w-full aspect-square rounded-md">
+                <div class="flex flex-col gap-10 items-center justify-center bg-amber-100 p-2 w-full aspect-square rounded-md border-3 border-b-7 border-r-7">
                     <p id="meteo-emoji" class="text-6xl"></p>
                     <div class="flex flex-col gap-2 items-center justify-center">
                         <p id="meteo-temp" class="text-3xl font-semibold">Chargement...</p>
@@ -146,7 +146,7 @@ $title_utilitaires = $utilitaires["title-utilitaires"] ?? "";
             </div>
 
             <div class="">
-                <div class="flex flex-col gap-10 items-center justify-center bg-amber-100 p-2 w-full aspect-square rounded-md">
+                <div class="flex flex-col gap-10 items-center justify-center bg-amber-100 p-2 w-full aspect-square rounded-md border-3 border-b-7 border-r-7">
                     <p class="text-6xl">💨</p>
                     <div class="flex flex-col gap-2 items-center justify-center">
                         <p class="text-3xl font-semibold" id="meteo-vent"></p>
@@ -157,7 +157,7 @@ $title_utilitaires = $utilitaires["title-utilitaires"] ?? "";
             </div>
         </div>
         <div class="grid grid-cols-3 gap-5 mx-50 whitespace-nowrap">
-            <a class="text-xl color border-4 rounded-xl rounded-tl-none bg-orange-light p-2 mx-30 my-10 text-center border-b-9 border-r-9" href="./etat-des-routes">VOIR PLUS</a>
+            <a class="text-xl color border-3 rounded-xl rounded-tl-none bg-[#FF8600] p-2 mx-30 my-10 text-center border-b-9 border-r-9" href="./etat-des-routes">VOIR PLUS</a>
 
         </div>
 

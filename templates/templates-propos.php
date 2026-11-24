@@ -36,7 +36,7 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 <!-- header -->
 
 <?php if (has_post_thumbnail()) : ?>
-    <section class="relative w-full h-[215px] overflow-hidden">
+    <section class="relative w-full h-[30vh] overflow-hidden">
 
         <?php the_post_thumbnail('full', [
             'class' => 'absolute inset-0 w-full h-full object-cover object-center',
@@ -97,9 +97,6 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 
 <!-- section : conseil d'administration -->
 
-
-<!-- section : conseil d'administration -->
-
 <?php
 $membres = [
     [
@@ -143,21 +140,21 @@ $membres = [
 
     <?php if (!empty($membres)) : ?>
 
-        <div class="relative max-w-6xl mx-auto" id="carrousel-membres">
+        <div class="max-w-6xl mx-auto" id="carrousel-membres">
 
-            <div class="relative">
+            <div class="relative min-h-125">
 
                 <?php foreach ($membres as $index => $membre) : ?>
 
-                    <div class="membre-slide <?php echo $index === 0 ? 'flex' : 'hidden'; ?> flex-col md:flex-row items-center gap-8 md:gap-12" data-slide="<?php echo $index; ?>">
+                    <div class="membre-slide <?php echo $index === 0 ? 'flex' : 'hidden'; ?> w-full flex-col md:flex-row gap-8 md:gap-12" data-slide="<?php echo $index; ?>">
 
-                        <div class="w-full md:w-1/2">
-                            <img src="<?php echo esc_url($membre['image']['url'] ?? $membre['image']); ?>" alt="<?php echo esc_attr($membre['nom']); ?>" class="w-full h-87 md:h-87 object-cover rounded-lg">
+                        <div class="w-full md:w-1/2 membre-animation transition-all duration-500 ease-in-out">
+                            <img src="<?php echo esc_url($membre['image']['url'] ?? $membre['image']); ?>" alt="<?php echo esc_attr($membre['nom']); ?>" class="w-full h-87 object-cover rounded-lg">
                         </div>
 
-                        <div class="w-full md:w-1/2 flex flex-col gap-4">
+                        <div class="w-full md:w-1/2 flex flex-col gap-4 membre-animation transition-all duration-500 ease-in-out">
 
-                            <h3 class="text-3xl md:text-4xl font-bold color-dark">
+                            <h3 class="text-2xl md:text-xl font-bold color-dark">
                                 <?php echo esc_html($membre['nom']); ?>
                             </h3>
 
@@ -168,20 +165,22 @@ $membres = [
                             <div class="text-base leading-relaxed">
                                 <?php echo wp_kses_post($membre['description']); ?>
                             </div>
+
                         </div>
+
                     </div>
+
                 <?php endforeach; ?>
+
             </div>
 
             <div class="flex justify-center items-center gap-6 mt-8">
 
-                <button type="button" data-carousel-prev aria-label="Membre précédent" class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-gray-100 transition">&#8592;
-                </button>
+                <button type="button" data-carousel-prev aria-label="Membre précédent" class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-gray-100 transition">&#8592;</button>
 
                 <span class="text-sm color-dark" data-carousel-counter>1 / <?php echo count($membres); ?></span>
 
-                <button type="button" data-carousel-next aria-label="Membre suivant" class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-gray-100 transition">&#8594;
-                </button>
+                <button type="button" data-carousel-next aria-label="Membre suivant" class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-gray-100 transition">&#8594;</button>
 
             </div>
 
@@ -190,7 +189,5 @@ $membres = [
     <?php endif; ?>
 
 </section>
-
-
 
 <?php get_footer(); ?>
