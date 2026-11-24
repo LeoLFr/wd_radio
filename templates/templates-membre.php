@@ -44,20 +44,18 @@ get_header();
 
     <div>
         <div>
-            <h2>Formulaire membre</h2>
-            <p>Devenez membre pour participer à la création de la première radio communautaire de La Matanie!</p>
-            <p>Remplissez ce formulaire pour devenir membre. Le frais d’adhésion peut être payé par virement à l’adresse : radiolamatanie@gmail.com. Votre adhésion sera valide un an.</p>
-            <p>L’échéancier de création de la radio communautaire s’échelonne sur trois ans. En devenant membre dès maintenant, vous ajoutez du poids au projet dans les représentations à venir auprès de partenaires potentiels et du CRTC. De plus, vous contribuez à couvrir certains frais de démarrage, comme les études techniques requises</p>
-            <p>Merci pour votre confiance et votre soutien!</p>
-            <a href="">Lien</a>
+            <h2></h2>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
         </div>
 
         <div>
-            <h2>Formulaire partenaire (organisme et entreprises)</h2>
-            <p>Ce projet de radio communautaire est une opportunité de montrer votre soutien à un projet structurant. De plus, différentes occasions de visibilité vous sont proposées. Consultez le plan de visibilité et n'hésitez pas à nous contacter pour en discuter.</p>
-            <p>L’échéancier de création de la radio communautaire s’échelonne sur trois ans. En devenant partenaire dès maintenant, vous ajoutez du poids au projet dans les représentations à venir auprès du CRTC. De plus, vous contribuez à couvrir certains frais de démarrage, comme les études techniques requises.</p>
-            <p>Merci pour votre confiance et votre soutien!</p>
-            <a href="">Lien</a>
+            <h2></h2>
+            <p></p>
+            <p></p>
+            <p></p>
         </div>
     </div>
 
