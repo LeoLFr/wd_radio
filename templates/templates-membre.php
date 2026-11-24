@@ -26,7 +26,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
     <section class="z-5 relative">
 
     <div class="fixed">
-        <div class="bg-black/30 fixed w-full h-[30vh] overflow-hidden pointer-events-none z-3"></div>
+        <div class="bg-black/30 top-0 left-0 fixed w-full h-[30vh] overflow-hidden pointer-events-none z-3"></div>
 
         <?php the_post_thumbnail('full', [
             'class' => 'fixed inset-0 w-full h-[30vh] object-cover object-center z-2',
