@@ -20,26 +20,53 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
 
 ?>
 
+
 <?php if (has_post_thumbnail()) : ?>
 
-    <?php the_post_thumbnail('full', [
-        'class' => 'fixed top-0 left-0 w-full h-[30vh] object-cover object-center z-2',
-        'alt' => get_the_title()
-    ]); ?>
+    <section class="relative rounded-t-xl overflow-hidden">
 
-    <div class="fixed top-0 left-0 w-full h-[30vh] bg-black/30 pointer-events-none z-3"></div>
+        <?php
+        the_post_thumbnail('full', [
+            'class' => 'fixed top-0 left-0 w-full h-full object-cover object-center z-0',
+            'alt'   => get_the_title()
+        ]);
+        ?>
+
+        <div class="fixed inset-0 bg-black/30 pointer-events-none z-1"></div>
+
+        <div class="relative h-[60svh] lg:h-[70vh] z-2">
+
+            <div class="absolute bottom-0 container">
+
+                <div class="relative w-fit">
+
+                    <div class="absolute top-0 bottom-0 left-[-100vw] right-0 bg-beige
+                        rounded-tr-xl
+                        after:content-[''] after:absolute
+                        after:bottom-0 after:-right-4
+                        after:w-4 after:h-4
+                        after:rounded-bl-xl
+                        after:shadow-[-4px_4px_0_0_#FFFBEF]">
+                    </div>
+
+                    <div class="relative py-6 pr-6 lg:pr-12">
+
+                        <h1 class="text-xl sm:text-3xl lg:text-5xl font-semibold uppercase">
+                            <?php the_title(); ?>
+                        </h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 <?php endif; ?>
-
-<div class="h-[30vh]"></div>
 
 <section class="bg-beige container min-h-screen z-10 relative">
 
     <div class="h-[10vh]"></div>
-
-    <h1 class="text-4xl md:text-6xl font-bold uppercase m-0 mb-15">
-        <?php the_title(); ?>
-    </h1>
 
     <div>
         <div>
@@ -50,7 +77,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
             <?php if (!empty($form_description_membre_rep)) : ?>
                 <?php foreach ($form_description_membre_rep as $description) : ?>
 
-                    <p class="w-2/4 text-neutral-600 mt-1"><?php echo esc_html($description["form-description-membre"] ?? ""); ?></p>
+                    <p class="lg:w-2/4 w-full text-neutral-600 mt-1"><?php echo esc_html($description["form-description-membre"] ?? ""); ?></p>
 
                 <?php endforeach; ?>
             <?php endif; ?>
@@ -71,7 +98,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
             <?php if (!empty($form_description_partenaire_rep)) : ?>
                 <?php foreach ($form_description_partenaire_rep as $description) : ?>
 
-                    <p class="w-2/4 text-neutral-600 mt-1"><?php echo esc_html($description["form-description-partenaire"] ?? ""); ?></p>
+                    <p class="lg:w-2/4 w-full text-neutral-600 mt-1"><?php echo esc_html($description["form-description-partenaire"] ?? ""); ?></p>
 
                 <?php endforeach; ?>
             <?php endif; ?>
