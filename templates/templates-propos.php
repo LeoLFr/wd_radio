@@ -56,7 +56,7 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 
 <!-- section : notre mission -->
 
-<section class="bg-beige container">
+<section class="bg-beige container py-[3vw]">
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
 
@@ -78,7 +78,7 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 
         <section class="bg-beige container">
 
-<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="grid grid-cols-1 md:grid-cols-2 py-[3vw]">
 
         <div class="flex flex-row gap-4 w-full">
             <?php if (!empty($image_mission_1)) : ?>
@@ -131,7 +131,7 @@ $membres = [
 ];
 ?>
 
-<section class="bg-beige container py-12">
+<section class="bg-beige container py-[3vw]">
 
     <h2 class="mb-10 font-bold text-xl color-dark">
         <?php echo esc_html($title_admin); ?>
@@ -145,7 +145,7 @@ $membres = [
 
                 <?php foreach ($membres as $index => $membre) : ?>
 
-                    <div class="membre-slide <?php echo $index === 0 ? 'flex' : 'hidden'; ?> w-full flex-col md:flex-row gap-8 md:gap-12" data-slide="<?php echo $index; ?>">
+                    <div class="flex-col gap-6 items-center bg-amber-100 p-2 aspect-square rounded-md border-3 border-b-7 border-r-7 <?php echo $index === 0 ? 'flex' : 'hidden'; ?> w-full md:flex-row md:gap-10" data-slide="<?php echo $index; ?>">
 
                         <div class="w-full md:w-1/2 membre-animation transition-all duration-500 ease-in-out">
                             <img src="<?php echo esc_url($membre['image']['url'] ?? $membre['image']); ?>" alt="<?php echo esc_attr($membre['nom']); ?>" class="w-full h-87 object-cover rounded-lg">

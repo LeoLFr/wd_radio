@@ -67,6 +67,15 @@ function charger_font_awesome() {
 }
 add_action('wp_enqueue_scripts', 'charger_font_awesome');
 
+function charger_font_heroicons() {
+    wp_enqueue_style(
+        'font-awesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css',
+        array(),
+        '6.7.2'
+    );
+}
+add_action('wp_enqueue_scripts', 'charger_font_awesome');
 
 function radio_setup_theme()
 {
