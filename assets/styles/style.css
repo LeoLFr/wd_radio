@@ -28,9 +28,9 @@ Version: 1.0
 
 @layer utilities {
 
-.container {
-    @apply max-w-[100em] w-full mx-auto lg:px-[6vw] px-[3vw] min-w-full;
-}
+    .container {
+        @apply max-w-[100em] w-full mx-auto lg:px-[6vw] px-[3vw] min-w-full;
+    }
 
 }
 
@@ -41,4 +41,3 @@ Version: 1.0
 html {
     scrollbar-width: none;
 }
-
