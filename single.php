@@ -12,15 +12,15 @@
             $lieux = get_field("lieux");
             ?>
 
-            <article class=" bg-amber-100 w-full rounded-md border-3 border-b-7 border-r-7 px-8 py-15">
-                <div class="lg:mr-5 w-full object-cover rounded-2xl">
+            <article class="w-full">
+                <div class="w-full h-[50vh] overflow-hidden ">
                     <?php
 
                     the_post_thumbnail();
 
                     ?>
                 </div>
-                <div class="m-6 justify-end">
+                <div class="m-6 bg-amber-100 rounded-md border-3 border-b-7 border-r-7">
 
                     <p class="text-2xl font-semibold md:w-3/4 md:whitespace-normal whitespace-nowrap"><?php the_title(); ?></p>
                     <p class="text-sm opacity-60 font-semibold mt-1 mb-2"><?php echo esc_html(implode(', ', $lieux)); ?></p>

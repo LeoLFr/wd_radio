@@ -27,7 +27,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
 
         <?php
         the_post_thumbnail('full', [
-            'class' => 'fixed top-0 left-0 w-full h-[30vh] object-cover object-center z-0',
+            'class' => 'fixed top-0 left-0 w-full h-[30vh] object-cover object-[35%_65%] z-0',
             'alt'   => get_the_title()
         ]);
         ?>
