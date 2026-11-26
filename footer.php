@@ -1,6 +1,6 @@
     </main>
 
-    <footer class="text-2xl container py-5 bg-purple flex justify-between text-beige">
+    <footer class="text-2xl container py-5 bg-purple flex justify-between text-beige z-10">
         <script> import { FaYoutube } from "react-icons/fa";</script>
         <div class="flex flex-col gap-3">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo-white.svg" alt="logo de la radio communautaire" class="flex justify-start object-contain w-45 h-45">
