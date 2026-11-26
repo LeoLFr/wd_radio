@@ -925,6 +925,9 @@
     .lg\:h-\[70vh\] {
       height: 70vh;
     }
+    .lg\:w-2\/3 {
+      width: calc(2 / 3 * 100%);
+    }
     .lg\:w-2\/4 {
       width: calc(2 / 4 * 100%);
     }
