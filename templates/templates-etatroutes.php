@@ -68,7 +68,7 @@ get_header();
     ?>
 
 
-        <div class="grid grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-15 px-15 lg:px-0 pb-15 lg:pb-0">
 
             <?php while ($query->have_posts()) : $query->the_post(); ?>
 
@@ -76,21 +76,21 @@ get_header();
                 $lieux = get_field("lieux");
                 ?>
 
-                <article class="flex bg-amber-100 w-full rounded-md border-3 border-b-7 border-r-7">
-                    <div class="mr-10 w-80 rounded-2xl">
+                <article class="lg:flex bg-amber-100 w-full rounded-md border-3 border-b-7 border-r-7  ">
+                    <div class="lg:mr-5 w-full object-cover rounded-2xl">
                         <?php
 
                         the_post_thumbnail();
 
                         ?>
                     </div>
-                    <div class="p-4">
+                    <div class="m-6 justify-end">
 
                         <p class="text-2xl font-semibold w-1/2 whitespace-nowrap"><?php the_title(); ?></p>
-                        <p class="opacity-60 font-semibold mb-5"><?php echo esc_html(implode(', ', $lieux)); ?></p>
-                        <p> <?php echo esc_html(wp_trim_words(get_the_excerpt(), 15, ' [...]')); ?></p>
+                        <p class="opacity-60 font-semibold mb-2"><?php echo esc_html(implode(', ', $lieux)); ?></p>
+                        <p class="mb-5"> <?php echo esc_html(wp_trim_words(get_the_excerpt(), 15, ' [...]')); ?></p>
 
-                        <a href="<?php echo esc_url(get_permalink()) ?>" class="">Plus de détails</a>
+                        <a href="<?php echo esc_url(get_permalink()) ?>" class="font-semibold text-end items-end ml-auto">Plus de détails</a>
 
                     </div>
 
