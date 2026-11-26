@@ -137,7 +137,6 @@ $membres = [
 
         <div class="max-w-6xl mx-auto" id="carrousel-membres">
 
-            <!-- Grid empilée : tous les slides dans la même cellule = hauteur stable -->
             <div class="bg-amber-100 rounded-md border-3 border-b-7 border-r-7 grid">
 
                 <?php foreach ($membres as $index => $membre) : ?>
