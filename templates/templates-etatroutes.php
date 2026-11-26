@@ -76,7 +76,7 @@ get_header();
                 $lieux = get_field("lieux");
                 ?>
 
-                <article class=" bg-amber-100 w-full rounded-md border-3 border-b-7 border-r-7  ">
+                <article class="bg-(--color-beige) w-full rounded-md border-3 border-b-7 border-r-7">
                     <div class="lg:mr-5 w-full object-cover rounded-2xl">
                         <?php
 
