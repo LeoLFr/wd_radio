@@ -56,7 +56,7 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 
 <!-- section : notre mission -->
 
-<section class="bg-beige container">
+<section class="bg-beige container py-[3vw]">
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
 
@@ -76,24 +76,19 @@ $poste_admin_5 = $conseiladmin["poste-admin-5"] ?? "";
 
         </div>
 
-        <section class="bg-beige container">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <?php if (!empty($image_mission_1)) : ?>
+                <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="" class="w-full h-60 rounded-sm object-cover">
+            <?php endif; ?>
 
-            <div class="grid grid-cols-1 md:grid-cols-2">
+            <?php if (!empty($image_mission_2)) : ?>
+                <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="" class="w-full h-60 rounded-sm object-cover">
+            <?php endif; ?>
+        </div>
 
-                <div class="flex flex-row gap-4 w-full">
-                    <?php if (!empty($image_mission_1)) : ?>
-                        <img src="<?php echo esc_url($image_mission_1["url"] ?? $image_mission_1); ?>" alt="" class="w-90 h-60 rounded-sm object-cover">
-                    <?php endif; ?>
-
-                    <?php if (!empty($image_mission_2)) : ?>
-                        <img src="<?php echo esc_url($image_mission_2["url"] ?? $image_mission_2); ?>" alt="" class="w-90 h-60 rounded-sm object-cover">
-                    <?php endif; ?>
-                </div>
-            </div>
     </div>
-</section>
-</section>
 
+</section>
 
 <!-- section : conseil d'administration -->
 
@@ -132,7 +127,7 @@ $membres = [
 ];
 ?>
 
-<section class="bg-beige container py-12">
+<section class="bg-beige container py-[3vw]">
 
     <h2 class="mb-10 font-bold text-xl color-dark">
         <?php echo esc_html($title_admin); ?>
@@ -142,11 +137,11 @@ $membres = [
 
         <div class="max-w-6xl mx-auto" id="carrousel-membres">
 
-            <div class="relative min-h-125">
+            <div class="bg-amber-100 rounded-md border-3 border-b-7 border-r-7 grid">
 
                 <?php foreach ($membres as $index => $membre) : ?>
 
-                    <div class="membre-slide <?php echo $index === 0 ? 'flex' : 'hidden'; ?> w-full flex-col md:flex-row gap-8 md:gap-12" data-slide="<?php echo $index; ?>">
+                    <div class="membre-slide col-start-1 row-start-1 p-6 flex flex-col gap-6 items-center w-full md:flex-row md:gap-10 transition-opacity duration-500 <?php echo $index === 0 ? 'opacity-100' : 'opacity-0 pointer-events-none'; ?>" data-slide="<?php echo $index; ?>">
 
                         <div class="w-full md:w-1/2 membre-animation transition-all duration-500 ease-in-out">
                             <img src="<?php echo esc_url($membre['image']['url'] ?? $membre['image']); ?>" alt="<?php echo esc_attr($membre['nom']); ?>" class="w-full h-87 object-cover rounded-lg">

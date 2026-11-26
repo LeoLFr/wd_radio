@@ -68,7 +68,7 @@ get_header();
     ?>
 
 
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-15 px-15 lg:px-0 pb-15 lg:pb-0">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-15 xl:grid-cols-3 px-8 lg:px-0 pb-15">
 
             <?php while ($query->have_posts()) : $query->the_post(); ?>
 
@@ -76,7 +76,7 @@ get_header();
                 $lieux = get_field("lieux");
                 ?>
 
-                <article class="lg:flex bg-amber-100 w-full rounded-md border-3 border-b-7 border-r-7  ">
+                <article class=" bg-amber-100 w-full rounded-md border-3 border-b-7 border-r-7  ">
                     <div class="lg:mr-5 w-full object-cover rounded-2xl">
                         <?php
 
@@ -86,8 +86,8 @@ get_header();
                     </div>
                     <div class="m-6 justify-end">
 
-                        <p class="text-2xl font-semibold w-1/2 whitespace-nowrap"><?php the_title(); ?></p>
-                        <p class="opacity-60 font-semibold mb-2"><?php echo esc_html(implode(', ', $lieux)); ?></p>
+                        <p class="text-2xl font-semibold md:w-3/4 md:whitespace-normal whitespace-nowrap"><?php the_title(); ?></p>
+                        <p class="text-sm opacity-60 font-semibold mt-1 mb-2"><?php echo esc_html(implode(', ', $lieux)); ?></p>
                         <p class="mb-5"> <?php echo esc_html(wp_trim_words(get_the_excerpt(), 15, ' [...]')); ?></p>
 
                         <a href="<?php echo esc_url(get_permalink()) ?>" class="font-semibold text-end items-end ml-auto">Plus de détails</a>
