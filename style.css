@@ -425,6 +425,9 @@
   .h-\[50vh\] {
     height: 50vh;
   }
+  .h-\[60svh\] {
+    height: 60svh;
+  }
   .h-\[70vh\] {
     height: 70vh;
   }
@@ -672,9 +675,6 @@
   .p-20 {
     padding: calc(var(--spacing) * 20);
   }
-  .p-60 {
-    padding: calc(var(--spacing) * 60);
-  }
   .px-1 {
     padding-inline: var(--spacing);
   }
@@ -692,9 +692,6 @@
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
-  }
-  .py-15 {
-    padding-block: calc(var(--spacing) * 15);
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
@@ -945,8 +942,14 @@
     .lg\:mr-5 {
       margin-right: calc(var(--spacing) * 5);
     }
+    .lg\:h-\[70vh\] {
+      height: 70vh;
+    }
     .lg\:w-2\/3 {
       width: calc(2 / 3 * 100%);
+    }
+    .lg\:w-2\/4 {
+      width: calc(2 / 4 * 100%);
     }
     .lg\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
