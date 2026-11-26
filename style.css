@@ -670,6 +670,9 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-\[35\%_65\%\] {
+    object-position: 35% 65%;
+  }
   .object-center {
     object-position: center;
   }
@@ -954,6 +957,9 @@
     }
     .lg\:h-\[70vh\] {
       height: 70vh;
+    }
+    .lg\:w-2\/3 {
+      width: calc(2 / 3 * 100%);
     }
     .lg\:w-2\/4 {
       width: calc(2 / 4 * 100%);

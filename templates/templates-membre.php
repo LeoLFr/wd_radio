@@ -27,14 +27,14 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
 
         <?php
         the_post_thumbnail('full', [
-            'class' => 'fixed top-0 left-0 w-full h-full object-cover object-center z-0',
+            'class' => 'fixed top-0 left-0 w-full h-[30vh] object-cover object-[35%_65%] z-0',
             'alt'   => get_the_title()
         ]);
         ?>
 
-        <div class="fixed inset-0 bg-black/30 pointer-events-none z-1"></div>
+        <div class="fixed inset-0 bg-black/30 pointer-events-none z-1 h-[30vh]"></div>
 
-        <div class="relative h-[60svh] lg:h-[70vh] z-2">
+        <div class="relative h-[30vh] z-2">
 
             <div class="absolute bottom-0 container">
 
@@ -77,7 +77,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
             <?php if (!empty($form_description_membre_rep)) : ?>
                 <?php foreach ($form_description_membre_rep as $description) : ?>
 
-                    <p class="lg:w-2/4 w-full text-neutral-600 mt-1"><?php echo esc_html($description["form-description-membre"] ?? ""); ?></p>
+                    <p class="lg:w-2/3 w-full text-neutral-600 mt-1"><?php echo esc_html($description["form-description-membre"] ?? ""); ?></p>
 
                 <?php endforeach; ?>
             <?php endif; ?>
@@ -98,7 +98,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
             <?php if (!empty($form_description_partenaire_rep)) : ?>
                 <?php foreach ($form_description_partenaire_rep as $description) : ?>
 
-                    <p class="lg:w-2/4 w-full text-neutral-600 mt-1"><?php echo esc_html($description["form-description-partenaire"] ?? ""); ?></p>
+                    <p class="lg:w-2/3 w-full text-neutral-600 mt-1"><?php echo esc_html($description["form-description-partenaire"] ?? ""); ?></p>
 
                 <?php endforeach; ?>
             <?php endif; ?>
