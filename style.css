@@ -666,6 +666,12 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-\[15\%_85\%\] {
+    object-position: 15% 85%;
+  }
+  .object-\[35\%_65\%\] {
+    object-position: 35% 65%;
+  }
   .object-center {
     object-position: center;
   }
