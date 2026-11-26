@@ -35,7 +35,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
 
 <section class="bg-beige container min-h-screen z-10 relative">
 
-    <div class="h-[5vh]"></div>
+    <div class="h-[10vh]"></div>
 
     <h1 class="text-4xl md:text-6xl font-bold uppercase m-0 mb-15">
         <?php the_title(); ?>
@@ -58,7 +58,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
             <?php if (!empty($link_form_membre)) : ?>
 
                 <a href="<?php echo esc_url($link_form_membre["url"]); ?>" target="<?php echo esc_attr($link_form_membre["target"] ?: "_self"); ?>"
-                class="inline-block mt-10 color border-3 rounded-lg rounded-tl-none bg-beige p-2 my-10 text-center border-b-5 border-r-5"><?php echo esc_html($link_form_membre["title"]); ?> </a>
+                    class="inline-block mt-10 color border-3 rounded-lg rounded-tl-none bg-beige p-2 my-10 text-center border-b-5 border-r-5"><?php echo esc_html($link_form_membre["title"]); ?> </a>
 
             <?php endif; ?>
         </div>
@@ -79,7 +79,7 @@ $link_form_partenaire = $form_partenaire["link-form-partenaire"] ?? "";
             <?php if (!empty($link_form_partenaire)) : ?>
 
                 <a href="<?php echo esc_url($link_form_partenaire["url"]); ?>" target="<?php echo esc_attr($link_form_partenaire["target"] ?: "_self"); ?>"
-                class="inline-block mt-10 color border-3 rounded-lg rounded-tl-none bg-beige p-2 my-10 text-center border-b-5 border-r-5"><?php echo esc_html($link_form_partenaire["title"]); ?> </a>
+                    class="inline-block mt-10 color border-3 rounded-lg rounded-tl-none bg-beige p-2 my-10 text-center border-b-5 border-r-5"><?php echo esc_html($link_form_partenaire["title"]); ?> </a>
 
             <?php endif; ?>
         </div>

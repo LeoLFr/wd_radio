@@ -86,9 +86,10 @@ get_header();
                     </div>
                     <div class="p-4">
 
-                        <p class="text-2xl font-semibold"><?php the_title(); ?></p>
+                        <p class="text-2xl font-semibold w-1/2 whitespace-nowrap"><?php the_title(); ?></p>
                         <p class="opacity-60 font-semibold mb-5"><?php echo esc_html(implode(', ', $lieux)); ?></p>
-                        <p><?php the_excerpt(); ?></p>
+                        <p> <?php echo esc_html(wp_trim_words(get_the_excerpt(), 15, ' [...]')); ?></p>
+
                         <a href="<?php echo esc_url(get_permalink()) ?>" class="">Plus de détails</a>
 
                     </div>

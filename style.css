@@ -395,6 +395,9 @@
   .h-\[5vh\] {
     height: 5vh;
   }
+  .h-\[10vh\] {
+    height: 10vh;
+  }
   .h-\[30vh\] {
     height: 30vh;
   }
@@ -410,11 +413,17 @@
   .min-h-125 {
     min-height: calc(var(--spacing) * 125);
   }
+  .min-h-\[400px\] {
+    min-height: 400px;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
   .w-0\.5 {
     width: calc(var(--spacing) * 0.5);
+  }
+  .w-1\/2 {
+    width: calc(1 / 2 * 100%);
   }
   .w-1\/3 {
     width: calc(1 / 3 * 100%);
@@ -641,11 +650,17 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
+  .p-15 {
+    padding: calc(var(--spacing) * 15);
+  }
   .p-20 {
     padding: calc(var(--spacing) * 20);
   }
   .p-60 {
     padding: calc(var(--spacing) * 60);
+  }
+  .p-\[3vw\] {
+    padding: 3vw;
   }
   .px-1 {
     padding-inline: var(--spacing);
